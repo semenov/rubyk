@@ -1,0 +1,10 @@
+#posts
+  - for post in @posts
+    .post
+      .content
+        = markdown post.content
+      .metadata
+        = link_to '#', post     
+        = nice_date post.created_at
+     
+

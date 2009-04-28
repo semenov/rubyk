@@ -1,0 +1,7 @@
+#post
+  .content
+    = markdown @post.content
+      
+  .metadata
+    = nice_date @post.created_at
+    = link_to '#', @post        

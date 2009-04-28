@@ -1,0 +1,22 @@
+!!!
+%html
+  %head
+    %title Соцмикроблог &mdash; Ruby
+    = stylesheet_link_tag 'scaffold'
+    = stylesheet_link_tag 'main'
+  %body
+    #header
+      %h1= link_to 'Соцмикроблог &mdash; Ruby', root_path, :title => 'Социальный микроблог о Ruby'
+      #new-post-link
+        = link_to '+ Новая запись', new_post_path
+    
+    #notice{ :style => "color: green" }     
+      = flash[:notice]
+    
+    #content
+      = yield
+      
+    #footer
+      &copy; Владислав Семенов 
+      | 
+      = link_to 'vladislav.semenov@gmail.com', 'mailto:vladislav.semenov@gmail.com'

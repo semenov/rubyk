@@ -1,0 +1,60 @@
+#header {
+  padding: 0 0 1em 0; }
+  #header h1 {
+    padding: 0 0 0.1em 0; }
+    #header h1 a {
+      text-decoration: none;
+      color: #885599; }
+      #header h1 a:hover {
+        color: #602d71;
+        background-color: #FFF; }
+
+#new-post-link a {
+  color: #FFF;
+  background-color: #885599;
+  text-decoration: none;
+  padding: 0.3em; }
+  #new-post-link a:hover {
+    background-color: #602d71; }
+
+div {
+  padding: 0;
+  margin: 0; }
+
+#content h1 {
+  font-size: 1.6em;
+  font-weight: normal; }
+#content #posts .post {
+  padding: 1.5em;
+  background-color: #EEE;
+  margin: 1em 0 1em 0; }
+#content #post {
+  padding: 1.5em;
+  background-color: #EEE;
+  margin: 1em 0 0 0; }
+#content .metadata {
+  font-style: italic;
+  color: #AAA;
+  font-size: smaller; }
+  #content .metadata a {
+    text-decoration: none; }
+    #content .metadata a:hover {
+      text-decoration: underline; }
+#content .content p {
+  font-size: 1.2em;
+  margin: 0 0 0.5em 0; }
+#content textarea#post_content {
+  width: 30%;
+  height: 150px;
+  font-size: 1.2em; }
+#content .tip {
+  font-size: smaller;
+  color: #777; }
+#content hr {
+  border: 0;
+  height: 1px;
+  color: #DDD;
+  background-color: #DDD; }
+
+#footer {
+  padding: 2em 0 2em 0; }

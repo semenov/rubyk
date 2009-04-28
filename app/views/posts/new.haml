@@ -1,0 +1,14 @@
+%h1 Создание записи
+
+- form_for(@post) do |f|
+  = f.error_messages
+
+  %p
+    .tip
+      Используйте 
+      =link_to('Markdown', 'http://ru.wikipedia.org/wiki/Markdown')
+      для разметки
+    = f.text_area :content
+
+  %p
+    = f.submit "Опубликовать"
