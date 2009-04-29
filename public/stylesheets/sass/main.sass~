@@ -42,7 +42,7 @@ div
   #post 
     :padding 1.5em
     :background-color #EEE  
-    :margin 2em 0 0 0
+    :margin 1em 0 0 0
     
   .metadata
     :font-style italic   
