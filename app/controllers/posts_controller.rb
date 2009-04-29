@@ -65,13 +65,13 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
 
     respond_to do |format|
-      if @post.update_attributes(params[:page])
+      if @post.update_attributes(params[:post])
         flash[:notice] = 'Запись успешно сохранена.'
         format.html { redirect_to(@post) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
-        format.xml  { render :xml => @page.errors, :status => :unprocessable_entity }
+        format.xml  { render :xml => @post.errors, :status => :unprocessable_entity }
       end
     end
   end    
