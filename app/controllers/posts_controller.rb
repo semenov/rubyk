@@ -49,5 +49,31 @@ class PostsController < ApplicationController
       end
     end
   end
+  
+
+  def edit
+    @post = Post.find(params[:id])
+    
+    respond_to do |format|
+      format.html 
+      format.xml  { render :xml => @post }
+    end    
+  end
+  
+
+  def update
+    @post = Post.find(params[:id])
+
+    respond_to do |format|
+      if @post.update_attributes(params[:page])
+        flash[:notice] = 'Запись успешно сохранена.'
+        format.html { redirect_to(@post) }
+        format.xml  { head :ok }
+      else
+        format.html { render :action => "edit" }
+        format.xml  { render :xml => @page.errors, :status => :unprocessable_entity }
+      end
+    end
+  end    
 
 end

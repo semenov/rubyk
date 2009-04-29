@@ -3165,3 +3165,1049 @@ ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" wit
   /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
 
 Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-04-29 02:24:51) [GET]
+Rendering template within layouts/main
+Rendering posts/index
+  [4;35;1mPost Load (1.5ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."published" = 't') ORDER BY created_at DESC[0m
+Completed in 25ms (View: 14, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-29 02:24:51) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-04-29 02:30:10) [GET]
+Rendering template within layouts/main
+Rendering posts/index
+  [4;36;1mPost Load (1.6ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."published" = 't') ORDER BY created_at DESC[0m
+Completed in 26ms (View: 15, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-29 02:30:10) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#new (for 127.0.0.1 at 2009-04-29 02:30:15) [GET]
+Rendering template within layouts/main
+Rendering posts/new
+Completed in 19ms (View: 8, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-29 02:30:15) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#create (for 127.0.0.1 at 2009-04-29 02:30:39) [POST]
+  Parameters: {"commit"=>"Опубликовать", "post"=>{"content"=>"Проверим -- работает ли дефис."}, "authenticity_token"=>"cIOqziOBK/IAdhh5mfZcfB8RP1jhJvvRDfSUW20M3mk="}
+  [4;35;1mPost Create (0.4ms)[0m   [0mINSERT INTO "posts" ("created_at", "published", "updated_at", "content") VALUES('2009-04-28 19:30:39', 't', '2009-04-28 19:30:39', 'Проверим -- работает ли дефис.')[0m
+Redirected to http://localhost:3000/posts/6
+Completed in 133ms (DB: 0) | 302 Found [http://localhost/posts]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-04-29 02:30:39) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mPost Load (0.5ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 6) [0m
+Rendering template within layouts/main
+Rendering posts/show
+Completed in 20ms (View: 7, DB: 0) | 200 OK [http://localhost/posts/6]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-29 02:30:39) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-04-29 02:30:42) [GET]
+Rendering template within layouts/main
+Rendering posts/index
+  [4;35;1mPost Load (1.8ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."published" = 't') ORDER BY created_at DESC[0m
+Completed in 26ms (View: 16, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-29 02:30:42) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-04-30 03:26:16) [GET]
+Rendering template within layouts/main
+Rendering posts/index
+  [4;36;1mPost Load (2.1ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."published" = 't') ORDER BY created_at DESC[0m
+Completed in 358ms (View: 336, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-30 03:26:17) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-04-30 03:26:23) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mPost Load (0.5ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 6) [0m
+Rendering template within layouts/main
+Rendering posts/show
+Completed in 25ms (View: 12, DB: 0) | 200 OK [http://localhost/posts/6]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-30 03:26:23) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#6 (for 127.0.0.1 at 2009-04-30 03:26:28) [GET]
+  Parameters: {"id"=>"edit"}
+
+ActionController::UnknownAction (No action responded to 6. Actions: create, edit, index, new, show, and update):
+  haml (2.0.9) rails/./lib/sass/plugin/rails.rb:19:in `process'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#edit (for 127.0.0.1 at 2009-04-30 03:26:49) [GET]
+  Parameters: {"id"=>"6"}
+Rendering template within layouts/main
+Rendering posts/edit
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #1 of app/views/posts/_form.haml:
+1: - form_for(@post) do |f|
+2:   = f.error_messages
+3: 
+4:   %p
+
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:171:in `form_for'
+    app/views/posts/_form.haml:1:in `_run_haml_app47views47posts47_form46haml_locals_form_object'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:12:in `render'
+    haml (2.0.9) lib/haml/helpers.rb:57:in `non_haml'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:12:in `render'
+    app/views/posts/edit.haml:3:in `_run_haml_app47views47posts47edit46haml'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) rails/./lib/sass/plugin/rails.rb:19:in `process'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (51.3ms)
+Rendered rescues/_request_and_response (1.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#edit (for 127.0.0.1 at 2009-04-30 03:28:29) [GET]
+  Parameters: {"id"=>"6"}
+Rendering template within layouts/main
+Rendering posts/edit
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #1 of app/views/posts/_form.haml:
+1: - form_for(@post) do |f|
+2:   = f.error_messages
+3: 
+4:   %p
+
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:171:in `form_for'
+    app/views/posts/_form.haml:1:in `_run_haml_app47views47posts47_form46haml_locals_form_object'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:12:in `render'
+    haml (2.0.9) lib/haml/helpers.rb:57:in `non_haml'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:12:in `render'
+    app/views/posts/edit.haml:3:in `_run_haml_app47views47posts47edit46haml'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) rails/./lib/sass/plugin/rails.rb:19:in `process'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (131.3ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-04-30 03:28:39) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mPost Load (0.7ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 6) [0m
+Rendering template within layouts/main
+Rendering posts/show
+Completed in 22ms (View: 9, DB: 1) | 200 OK [http://localhost/posts/6]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-30 03:28:39) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#new (for 127.0.0.1 at 2009-04-30 03:28:41) [GET]
+Rendering template within layouts/main
+Rendering posts/new
+Rendered posts/_form (5.2ms)
+Completed in 24ms (View: 13, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-30 03:28:41) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#create (for 127.0.0.1 at 2009-04-30 03:28:45) [POST]
+  Parameters: {"commit"=>"Опубликовать", "post"=>{"content"=>"123"}, "authenticity_token"=>"dnOM02d2idPlUKO37RbE738NiDu5Z//HN1fPQabqdv4="}
+  [4;35;1mPost Create (0.7ms)[0m   [0mINSERT INTO "posts" ("created_at", "published", "updated_at", "content") VALUES('2009-04-29 20:28:45', 't', '2009-04-29 20:28:45', '123')[0m
+Redirected to http://localhost:3000/posts/7
+Completed in 119ms (DB: 1) | 302 Found [http://localhost/posts]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-04-30 03:28:45) [GET]
+  Parameters: {"id"=>"7"}
+  [4;36;1mPost Load (0.5ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 7) [0m
+Rendering template within layouts/main
+Rendering posts/show
+Completed in 101ms (View: 4, DB: 0) | 200 OK [http://localhost/posts/7]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-30 03:28:45) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-04-30 03:28:51) [GET]
+Rendering template within layouts/main
+Rendering posts/index
+  [4;35;1mPost Load (2.1ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."published" = 't') ORDER BY created_at DESC[0m
+Completed in 30ms (View: 18, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-30 03:28:51) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-04-30 03:28:54) [GET]
+  Parameters: {"id"=>"7"}
+  [4;36;1mPost Load (0.5ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 7) [0m
+Rendering template within layouts/main
+Rendering posts/show
+Completed in 19ms (View: 7, DB: 0) | 200 OK [http://localhost/posts/7]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-30 03:28:54) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#edit (for 127.0.0.1 at 2009-04-30 03:29:00) [GET]
+  Parameters: {"id"=>"7"}
+Rendering template within layouts/main
+Rendering posts/edit
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #1 of app/views/posts/_form.haml:
+1: - form_for(@post) do |f|
+2:   = f.error_messages
+3: 
+4:   %p
+
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:171:in `form_for'
+    app/views/posts/_form.haml:1:in `_run_haml_app47views47posts47_form46haml_locals_form_object'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:12:in `render'
+    haml (2.0.9) lib/haml/helpers.rb:57:in `non_haml'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:12:in `render'
+    app/views/posts/edit.haml:3:in `_run_haml_app47views47posts47edit46haml'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) rails/./lib/sass/plugin/rails.rb:19:in `process'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (156.7ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#edit (for 127.0.0.1 at 2009-04-30 03:31:13) [GET]
+  Parameters: {"id"=>"7"}
+Rendering template within layouts/main
+Rendering posts/edit
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #1 of app/views/posts/_form.haml:
+1: - form_for(@post) do |f|
+2:   = f.error_messages
+3: 
+4:   %p
+
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:171:in `form_for'
+    app/views/posts/_form.haml:1:in `_run_haml_app47views47posts47_form46haml_locals_form_object'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:12:in `render'
+    haml (2.0.9) lib/haml/helpers.rb:57:in `non_haml'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:12:in `render'
+    app/views/posts/edit.haml:3:in `_run_haml_app47views47posts47edit46haml'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) rails/./lib/sass/plugin/rails.rb:19:in `process'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (101.2ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-04-30 03:34:40) [GET]
+  Parameters: {"id"=>"7"}
+  [4;35;1mPost Load (0.5ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 7) [0m
+Rendering template within layouts/main
+Rendering posts/show
+Completed in 20ms (View: 7, DB: 1) | 200 OK [http://localhost/posts/7]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-30 03:34:40) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#edit (for 127.0.0.1 at 2009-04-30 03:34:48) [GET]
+  Parameters: {"id"=>"7"}
+Rendering template within layouts/main
+Rendering posts/edit
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #1 of app/views/posts/_form.haml:
+1: = form_for(@post) do |f|
+2:   = f.error_messages
+3: 
+4:   %p
+
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:171:in `form_for'
+    app/views/posts/_form.haml:1:in `_run_haml_app47views47posts47_form46haml_locals_form_object'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:12:in `render'
+    haml (2.0.9) lib/haml/helpers.rb:57:in `non_haml'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:12:in `render'
+    app/views/posts/edit.haml:3:in `_run_haml_app47views47posts47edit46haml'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) rails/./lib/sass/plugin/rails.rb:19:in `process'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (47.7ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#edit (for 127.0.0.1 at 2009-04-30 03:35:46) [GET]
+  Parameters: {"id"=>"7"}
+Rendering template within layouts/main
+Rendering posts/edit
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #1 of app/views/posts/_form.haml:
+1: = form_for(@post) do |f|
+2:   = f.error_messages
+3: 
+4:   %p
+
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:171:in `form_for'
+    app/views/posts/_form.haml:1:in `_run_haml_app47views47posts47_form46haml_locals_form_object'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:12:in `render'
+    haml (2.0.9) lib/haml/helpers.rb:57:in `non_haml'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:12:in `render'
+    app/views/posts/edit.haml:3:in `_run_haml_app47views47posts47edit46haml'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) rails/./lib/sass/plugin/rails.rb:19:in `process'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (46.7ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#edit (for 127.0.0.1 at 2009-04-30 03:35:48) [GET]
+  Parameters: {"id"=>"7"}
+Rendering template within layouts/main
+Rendering posts/edit
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #1 of app/views/posts/_form.haml:
+1: = form_for(@post) do |f|
+2:   = f.error_messages
+3: 
+4:   %p
+
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:171:in `form_for'
+    app/views/posts/_form.haml:1:in `_run_haml_app47views47posts47_form46haml_locals_form_object'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:12:in `render'
+    haml (2.0.9) lib/haml/helpers.rb:57:in `non_haml'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:12:in `render'
+    app/views/posts/edit.haml:3:in `_run_haml_app47views47posts47edit46haml'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) rails/./lib/sass/plugin/rails.rb:19:in `process'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (113.4ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-04-30 03:37:50) [GET]
+  Parameters: {"id"=>"7"}
+  [4;36;1mPost Load (0.5ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 7) [0m
+Rendering template within layouts/main
+Rendering posts/show
+Completed in 19ms (View: 7, DB: 0) | 200 OK [http://localhost/posts/7]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-30 03:37:50) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#edit (for 127.0.0.1 at 2009-04-30 03:37:56) [GET]
+  Parameters: {"id"=>"7"}
+Rendering template within layouts/main
+Rendering posts/edit
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #1 of app/views/posts/_form.haml:
+1: = form_for(@post) do |f|
+2:   = f.error_messages
+3: 
+4:   %p
+
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:171:in `form_for'
+    app/views/posts/_form.haml:1:in `_run_haml_app47views47posts47_form46haml_locals_form_object'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:12:in `render'
+    haml (2.0.9) lib/haml/helpers.rb:57:in `non_haml'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:12:in `render'
+    app/views/posts/edit.haml:3:in `_run_haml_app47views47posts47edit46haml'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) rails/./lib/sass/plugin/rails.rb:19:in `process'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (150.2ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#edit (for 127.0.0.1 at 2009-04-30 03:38:15) [GET]
+  Parameters: {"id"=>"7"}
+Rendering template within layouts/main
+Rendering posts/edit
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #1 of app/views/posts/_form.haml:
+1: = form_for(@post) do |f|
+2:   = f.error_messages
+3: 
+4:   %p
+
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:171:in `form_for'
+    app/views/posts/_form.haml:1:in `_run_haml_app47views47posts47_form46haml_locals_form_object'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:12:in `render'
+    haml (2.0.9) lib/haml/helpers.rb:57:in `non_haml'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:12:in `render'
+    app/views/posts/edit.haml:3:in `_run_haml_app47views47posts47edit46haml'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) rails/./lib/sass/plugin/rails.rb:19:in `process'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (180.1ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#edit (for 127.0.0.1 at 2009-04-30 03:41:04) [GET]
+  Parameters: {"id"=>"6"}
+Rendering template within layouts/main
+Rendering posts/edit
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #1 of app/views/posts/_form.haml:
+1: - form_for(@post) do |f|
+2:   = f.error_messages
+3: 
+4:   %p
+
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:171:in `form_for'
+    app/views/posts/_form.haml:1:in `_run_haml_app47views47posts47_form46haml_locals_form_object'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:12:in `render'
+    haml (2.0.9) lib/haml/helpers.rb:57:in `non_haml'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:12:in `render'
+    app/views/posts/edit.haml:3:in `_run_haml_app47views47posts47edit46haml'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) rails/./lib/sass/plugin/rails.rb:19:in `process'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (48.5ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#correct (for 127.0.0.1 at 2009-04-30 03:41:20) [GET]
+  Parameters: {"id"=>"6"}
+
+ActionController::UnknownAction (No action responded to correct. Actions: create, edit, index, new, show, and update):
+  haml (2.0.9) rails/./lib/sass/plugin/rails.rb:19:in `process'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#edit (for 127.0.0.1 at 2009-04-30 03:41:29) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mPost Load (0.5ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 6) [0m
+#<Post:0x7fb52311ae38>
+Rendering template within layouts/main
+Rendering posts/edit
+Rendered posts/_form (7.1ms)
+Completed in 24ms (View: 11, DB: 1) | 200 OK [http://localhost/posts/edit/6]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-30 03:41:29) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#6 (for 127.0.0.1 at 2009-04-30 03:44:33) [GET]
+  Parameters: {"id"=>"edit"}
+
+ActionController::UnknownAction (No action responded to 6. Actions: create, edit, index, new, show, and update):
+  haml (2.0.9) rails/./lib/sass/plugin/rails.rb:19:in `process'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#edit (for 127.0.0.1 at 2009-04-30 03:44:43) [GET]
+  Parameters: {"id"=>"6"}
+Rendering template within layouts/main
+Rendering posts/edit
+Completed in 11ms (View: 7, DB: 0) | 200 OK [http://localhost/posts/6/correct]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-30 03:44:43) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#edit (for 127.0.0.1 at 2009-04-30 03:46:11) [GET]
+  Parameters: {"id"=>"6"}
+Rendering template within layouts/main
+Rendering posts/edit
+Completed in 11ms (View: 8, DB: 0) | 200 OK [http://localhost/posts/6/correct]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-30 03:46:11) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#edit (for 127.0.0.1 at 2009-04-30 03:46:12) [GET]
+  Parameters: {"id"=>"6"}
+Rendering template within layouts/main
+Rendering posts/edit
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://localhost/posts/6/correct]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-30 03:46:12) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#edit (for 127.0.0.1 at 2009-04-30 03:46:13) [GET]
+  Parameters: {"id"=>"6"}
+Rendering template within layouts/main
+Rendering posts/edit
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://localhost/posts/6/correct]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-30 03:46:13) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#edit (for 127.0.0.1 at 2009-04-30 03:46:14) [GET]
+  Parameters: {"id"=>"6"}
+Rendering template within layouts/main
+Rendering posts/edit
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/posts/6/correct]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-30 03:46:14) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#edit (for 127.0.0.1 at 2009-04-30 03:48:38) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 6) [0m
+Rendering template within layouts/main
+Rendering posts/edit
+Completed in 10ms (View: 2, DB: 0) | 200 OK [http://localhost/posts/6/correct]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-30 03:48:38) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#edit (for 127.0.0.1 at 2009-04-30 03:49:07) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mPost Load (0.5ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 6) [0m
+Rendering template within layouts/main
+Rendering posts/edit
+Rendered posts/_form (97.8ms)
+Completed in 118ms (View: 106, DB: 0) | 200 OK [http://localhost/posts/6/correct]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-30 03:49:08) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-04-30 03:49:15) [GET]
+Rendering template within layouts/main
+Rendering posts/index
+  [4;36;1mPost Load (2.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."published" = 't') ORDER BY created_at DESC[0m
+Completed in 28ms (View: 17, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-30 03:49:15) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-04-30 03:49:24) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 4) [0m
+Rendering template within layouts/main
+Rendering posts/show
+Completed in 11ms (View: 4, DB: 0) | 200 OK [http://localhost/posts/4]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-30 03:49:24) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#edit (for 127.0.0.1 at 2009-04-30 03:49:30) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mPost Load (0.5ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 4) [0m
+Rendering template within layouts/main
+Rendering posts/edit
+Rendered posts/_form (5.5ms)
+Completed in 21ms (View: 9, DB: 0) | 200 OK [http://localhost/posts/4/correct]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-30 03:49:30) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
