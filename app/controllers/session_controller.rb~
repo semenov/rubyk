@@ -18,14 +18,14 @@ class SessionController < ApplicationController
     user.name = xml["author"].first["name"].first
     user.oauth_token  =  access_token.token
     user.oauth_secret =  access_token.secret
-     user.save
+    user.save
     session[:user_id] = user.id
-    redirect_to :controller => 'account'
+    redirect_to :controller => 'posts'
   end
  
   def delete
     reset_session
-    flash[:notice] = "You have been logged out"
-    redirect_to :action => 'new'
+    flash[:notice] = "Вы успешно вышли из системы"
+    redirect_to :controller => 'posts'
   end
 end

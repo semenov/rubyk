@@ -12,7 +12,7 @@ class SessionController < ApplicationController
   def create
     request_token = OAuth::RequestToken.new(get_consumer, params[:oauth_token], session[:oauth_secret])
     access_token = request_token.get_access_token
-     xml = XmlSimple.xml_in(access_token.get("https://www.google.com/m8/feeds/contacts/default/full/").body)
+    xml = XmlSimple.xml_in(access_token.get("https://www.google.com/m8/feeds/contacts/default/full/").body)
     email = xml["author"].first["email"].first
     user = User.find_or_create_by_email(email)
     user.name = xml["author"].first["name"].first

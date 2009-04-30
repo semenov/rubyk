@@ -4353,3 +4353,176 @@ Rendering rescues/layout (internal_server_error)
 Processing SessionController#new (for 127.0.0.1 at 2009-04-30 16:38:56) [GET]
 Redirected to https://www.google.com/accounts/OAuthAuthorizeToken?oauth_token=4%2FPPOcxAM917ZEZEmc0FCezPWoiKma&oauth_callback=http://localhost:3000/session/create
 Completed in 878ms (DB: 0) | 302 Found [http://localhost/session/new]
+
+
+Processing SessionController#create (for 127.0.0.1 at 2009-04-30 16:41:46) [GET]
+  Parameters: {"oauth_token"=>"4/VHVzaaveTUL0Ks3by1sWBT6O2_Gj"}
+
+OAuth::Unauthorized (400 Bad Request):
+  oauth (0.3.2) lib/oauth/consumer.rb:166:in `token_request'
+  oauth (0.3.2) lib/oauth/tokens/request_token.rb:14:in `get_access_token'
+  app/controllers/session_controller.rb:14:in `create'
+  haml (2.0.9) rails/./lib/sass/plugin/rails.rb:19:in `process'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (30.1ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SessionController#create (for 127.0.0.1 at 2009-04-30 16:42:26) [GET]
+  Parameters: {"oauth_token"=>"4/VHVzaaveTUL0Ks3by1sWBT6O2_Gj"}
+
+OAuth::Unauthorized (400 Bad Request):
+  oauth (0.3.2) lib/oauth/consumer.rb:166:in `token_request'
+  oauth (0.3.2) lib/oauth/tokens/request_token.rb:14:in `get_access_token'
+  app/controllers/session_controller.rb:14:in `create'
+  haml (2.0.9) rails/./lib/sass/plugin/rails.rb:19:in `process'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (32.1ms)
+Rendered rescues/_request_and_response (13.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SessionController#create (for 127.0.0.1 at 2009-04-30 16:42:34) [GET]
+  Parameters: {"oauth_token"=>"4VHVzaaveTUL0Ks3by1sWBT6O2_Gj"}
+
+OAuth::Unauthorized (400 Bad Request):
+  oauth (0.3.2) lib/oauth/consumer.rb:166:in `token_request'
+  oauth (0.3.2) lib/oauth/tokens/request_token.rb:14:in `get_access_token'
+  app/controllers/session_controller.rb:14:in `create'
+  haml (2.0.9) rails/./lib/sass/plugin/rails.rb:19:in `process'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (69.9ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SessionController#create (for 127.0.0.1 at 2009-04-30 16:46:54) [GET]
+
+OAuth::Unauthorized (400 Bad Request):
+  oauth (0.3.2) lib/oauth/consumer.rb:166:in `token_request'
+  oauth (0.3.2) lib/oauth/tokens/request_token.rb:14:in `get_access_token'
+  app/controllers/session_controller.rb:14:in `create'
+  haml (2.0.9) rails/./lib/sass/plugin/rails.rb:19:in `process'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (63.1ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SessionController#new (for 127.0.0.1 at 2009-04-30 16:47:05) [GET]
+Redirected to https://www.google.com/accounts/OAuthAuthorizeToken?oauth_token=4%2FIle5DrUpIbEa69pGmwPZ2I-KAY7W&oauth_callback=http://localhost:3000/session/create
+Completed in 1065ms (DB: 0) | 302 Found [http://localhost/session/new]
+
+
+Processing SessionController#create (for 127.0.0.1 at 2009-04-30 16:47:14) [GET]
+  Parameters: {"oauth_token"=>"4/Ile5DrUpIbEa69pGmwPZ2I-KAY7W"}
+
+NameError (uninitialized constant SessionController::XmlSimple):
+  app/controllers/session_controller.rb:15:in `create'
+  haml (2.0.9) rails/./lib/sass/plugin/rails.rb:19:in `process'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (57.3ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SessionController#new (for 127.0.0.1 at 2009-04-30 16:49:30) [GET]
+Redirected to https://www.google.com/accounts/OAuthAuthorizeToken?oauth_token=4%2FhnU_JxN2WI1z9slj_SH5n4r4VEVl&oauth_callback=http://localhost:3000/session/create
+Completed in 1379ms (DB: 0) | 302 Found [http://localhost/session/new]
+
+
+Processing SessionController#create (for 127.0.0.1 at 2009-04-30 16:50:07) [GET]
+  Parameters: {"oauth_token"=>"4/hnU_JxN2WI1z9slj_SH5n4r4VEVl"}
+
+NameError (uninitialized constant SessionController::XmlSimple):
+  app/controllers/session_controller.rb:15:in `create'
+  haml (2.0.9) rails/./lib/sass/plugin/rails.rb:19:in `process'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (135.8ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SessionController#create (for 127.0.0.1 at 2009-04-30 16:53:53) [GET]
+  Parameters: {"oauth_token"=>"4/hnU_JxN2WI1z9slj_SH5n4r4VEVl"}
+
+OAuth::Unauthorized (400 Bad Request):
+  oauth (0.3.2) lib/oauth/consumer.rb:166:in `token_request'
+  oauth (0.3.2) lib/oauth/tokens/request_token.rb:14:in `get_access_token'
+  app/controllers/session_controller.rb:14:in `create'
+  haml (2.0.9) lib/sass/plugin/rails.rb:19:in `process'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (129.9ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)

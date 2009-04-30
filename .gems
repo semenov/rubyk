@@ -1,3 +1,4 @@
 haml
 rdiscount
 oauth
+xml-simple
