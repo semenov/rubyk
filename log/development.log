@@ -4305,3 +4305,51 @@ ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" wit
   /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
 
 Rendering rescues/layout (not_found)
+
+
+Processing SessionController#new (for 127.0.0.1 at 2009-04-30 16:37:17) [GET]
+
+NameError (uninitialized constant OAuth::RESERVED_CHARACTERS):
+  oauth (0.3.2) lib/oauth/helper.rb:9:in `escape'
+  oauth (0.3.2) lib/oauth/helper.rb:28:in `normalize'
+  oauth (0.3.2) lib/oauth/helper.rb:27:in `collect'
+  oauth (0.3.2) lib/oauth/helper.rb:27:in `normalize'
+  oauth (0.3.2) lib/oauth/helper.rb:23:in `map'
+  oauth (0.3.2) lib/oauth/helper.rb:23:in `normalize'
+  oauth (0.3.2) lib/oauth/request_proxy/base.rb:89:in `normalized_parameters'
+  oauth (0.3.2) lib/oauth/request_proxy/base.rb:104:in `signature_base_string'
+  oauth (0.3.2) lib/oauth/signature/base.rb:66:in `signature_base_string'
+  oauth (0.3.2) lib/oauth/signature/rsa/sha1.rb:42:in `digest'
+  oauth (0.3.2) lib/oauth/signature/base.rb:54:in `signature'
+  oauth (0.3.2) lib/oauth/signature.rb:15:in `sign'
+  oauth (0.3.2) lib/oauth/client/helper.rb:41:in `signature'
+  oauth (0.3.2) lib/oauth/client/helper.rb:55:in `header'
+  oauth (0.3.2) lib/oauth/client/net_http.rb:52:in `set_oauth_header'
+  oauth (0.3.2) lib/oauth/client/net_http.rb:20:in `send'
+  oauth (0.3.2) lib/oauth/client/net_http.rb:20:in `oauth!'
+  oauth (0.3.2) lib/oauth/consumer.rb:174:in `sign!'
+  oauth (0.3.2) lib/oauth/consumer.rb:150:in `create_signed_request'
+  oauth (0.3.2) lib/oauth/consumer.rb:122:in `request'
+  oauth (0.3.2) lib/oauth/consumer.rb:156:in `token_request'
+  oauth (0.3.2) lib/oauth/consumer.rb:104:in `get_request_token'
+  app/controllers/session_controller.rb:6:in `new'
+  haml (2.0.9) rails/./lib/sass/plugin/rails.rb:19:in `process'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (89.8ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SessionController#new (for 127.0.0.1 at 2009-04-30 16:38:56) [GET]
+Redirected to https://www.google.com/accounts/OAuthAuthorizeToken?oauth_token=4%2FPPOcxAM917ZEZEmc0FCezPWoiKma&oauth_callback=http://localhost:3000/session/create
+Completed in 878ms (DB: 0) | 302 Found [http://localhost/session/new]
