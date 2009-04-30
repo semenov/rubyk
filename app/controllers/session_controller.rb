@@ -5,7 +5,7 @@ class SessionController < ApplicationController
     consumer = get_consumer
     request_token = consumer.get_request_token( {}, {:scope => "https://www.google.com/m8/feeds/"})
     session[:oauth_secret] = request_token.secret
-    next_url = url_for :action => 'create'
+    next_url = url_for :action => 'create', :protocol => 'https'
     redirect_to request_token.authorize_url + "&oauth_callback=#{next_url}"
   end
  
