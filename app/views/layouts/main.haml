@@ -16,7 +16,7 @@
     
     - if session[:user_id]
       .user
-        = "Пользователь в системе: " + session[:user_id] 
+        = "Пользователь в системе: " + session[:user_id].to_s 
     
     #content
       = yield

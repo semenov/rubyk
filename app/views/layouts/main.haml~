@@ -14,7 +14,7 @@
     #notice{ :style => "color: green" }     
       = flash[:notice]
     
-    if session[:user_id]
+    - if session[:user_id]
       .user
         = "Пользователь в системе: " + session[:user_id] 
     
