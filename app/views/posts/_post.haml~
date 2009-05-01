@@ -1,0 +1,18 @@
+.post
+  .content
+    = markdown h post.content
+  .metadata 
+    %strong
+      = post.author.username
+    |    
+    = nice_date post.created_at
+    |
+    = link_to '#', post     
+    | 
+    = link_to "[#{post.comments_count}]", post      
+    - if user_can_edit? post
+      |
+      = link_to 'Редактировать', edit_post_path(post) 
+      |
+      = link_to 'Удалить', post_path(post), :confirm => 'Точно удалить?', :method => :delete
+      

@@ -1,8 +1,11 @@
 class PostsController < ApplicationController
+
+  before_filter :login_required, :except => [:index, :show]
+  
   # GET /posts
   # GET /posts.xml
   def index
-    @posts = Post.published
+    @posts = Post.published.paginate :page => params[:page], :per_page => 10
 
     respond_to do |format|
       format.html # index.html.erb
@@ -14,6 +17,7 @@ class PostsController < ApplicationController
   # GET /posts/1.xml
   def show
     @post = Post.find(params[:id])
+    @comment = Comment.new
 
     respond_to do |format|
       format.html # show.html.erb
@@ -34,9 +38,10 @@ class PostsController < ApplicationController
 
   # POST /posts
   # POST /posts.xml
-  def create
+  def create 
     @post = Post.new(params[:post])
     @post.published = true
+    @post.author = current_user
 
     respond_to do |format|
       if @post.save
@@ -63,7 +68,7 @@ class PostsController < ApplicationController
 
   def update
     @post = Post.find(params[:id])
-
+    return redirect_to root_path if !user_can_edit? @post
     respond_to do |format|
       if @post.update_attributes(params[:post])
         flash[:notice] = 'Запись успешно сохранена.'
@@ -74,6 +79,27 @@ class PostsController < ApplicationController
         format.xml  { render :xml => @post.errors, :status => :unprocessable_entity }
       end
     end
+  end  
+  
+
+  def destroy
+    @post = Post.find(params[:id])
+    return redirect_to root_path if !user_can_edit? @post
+    @post.destroy
+    
+    flash[:notice] = 'Запись успешно удалена.'
+    
+    respond_to do |format|
+      format.html { redirect_to(root_path) }
+      format.xml  { head :ok }
+    end
   end    
+  
+  def feed
+    @posts = Post.published(:limit => 10)
+    response.headers['Content-Type'] = 'application/rss+xml'
+    render :action => "feed", :layout => false
+  end
+  
 
 end

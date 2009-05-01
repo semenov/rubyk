@@ -9,13 +9,33 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090428123103) do
+ActiveRecord::Schema.define(:version => 20090501223845) do
+
+  create_table "comments", :force => true do |t|
+    t.text     "content"
+    t.integer  "post_id"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "posts", :force => true do |t|
     t.text     "content"
     t.boolean  "published"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id",        :default => 1
+    t.integer  "comments_count", :default => 0
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "oauth_token"
+    t.string   "oauth_secret"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.boolean  "admin"
   end
 
 end

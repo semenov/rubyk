@@ -1,0 +1,4 @@
+%h2 Создание комментария
+= render :partial => "form", :locals => {:post => @comment.post, :comment => @comment}
+%ul
+  %li= link_to 'Back', comments_path

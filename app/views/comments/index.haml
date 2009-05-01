@@ -1,0 +1,7 @@
+%h2 Последние комментарии
+- if !@comments.empty?
+  .comments
+    = render :partial => "comment", :collection => @comments
+  = will_paginate(@comments)
+- else
+  %p Пока комментариев нет.

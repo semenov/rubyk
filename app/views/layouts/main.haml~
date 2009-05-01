@@ -7,16 +7,30 @@
     %meta{ :name => "verify-v1", :content => "O4WFIMbJI3wxKAlvEABozYFjcyvP5DrOye2kT4+8oBc=" }
   %body
     #header
-      %h1= link_to 'Соцмикроблог о Ruby', root_path, :title => 'Социальный микроблог о Ruby'
+      #logo
+        - link_to root_path, :title => "Социальный микроблог о Ruby" do
+          = image_tag "rubyk.gif", :alt => "Рубик"
+          
       #new-post-link
-        = link_to '+ Новая запись', new_post_path
+        = link_to 'новая запись', new_post_path            
+
+      #auth    
+        - if logged_in?
+          %strong
+            = current_user.email
+          |
+          = link_to 'Выйти', logout_path
+        - else
+          = link_to 'Войти через Google Account', login_path
+
+
+
+
     
-    #notice{ :style => "color: green" }     
+    #notice  
       = flash[:notice]
     
-    - if session[:user_id]
-      .user
-        = "Пользователь в системе: " + session[:user_id] 
+
     
     #content
       = yield

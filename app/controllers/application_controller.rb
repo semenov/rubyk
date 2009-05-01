@@ -6,14 +6,29 @@ class ApplicationController < ActionController::Base
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
   layout "main"
 
+  helper_method :current_user, :logged_in?, :user_can_edit?
+  
   def login_required
-    if session[:user_id]
-      @user ||= User.find(session[:user_id])
-      @access_token ||= OAuth::AccessToken.new(get_consumer, @user.oauth_token, @user.oauth_secret)
-    else
-      redirect_to :controller => 'session', :action => 'new'
+    if !current_user
+      redirect_to auth_info_path
     end
   end
+  
+  def current_user
+      session[:user]
+  end
+  
+  def logged_in?
+    !current_user.nil?
+  end
+   
+  def user_can_edit?(object)
+    if logged_in?
+      object.author.id == current_user.id || current_user.admin?
+    else
+      false
+    end
+  end    
   
   CONSUMER_KEY = "ruby.heroku.com"
   CONSUMER_SECRET = "gNBMNP7XzqazR+cENz0pVSz+"

@@ -7,6 +7,6 @@ module ApplicationHelper
   end
   
   def nice_date(date)
-    date.strftime("%d.%m.%Y") # %Y.%m.%d %H:%M
+    date.strftime("%H:%M %d.%m.%Y") # %Y.%m.%d %H:%M
   end
 end

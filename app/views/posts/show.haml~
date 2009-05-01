@@ -1,7 +1,14 @@
 #post
-  .content
-    = markdown @post.content
-      
-  .metadata
-    = nice_date @post.created_at
-    = link_to '#', @post        
+  = render :partial => "post", :locals => { :post => @post }
+  
+%h2 Комментарии
+- if !@post.comments.empty?
+  .comments
+    = render :partial => "comments/comment", :collection => @post.comments
+
+- else
+  %p Комментариев пока нет.
+= link_to 'Комментировать', new_comment_path  
+
+= render :partial => "comments/form", :locals => { :post => @post, :comment => @comment }
+     

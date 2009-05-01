@@ -1,0 +1,20 @@
+xml.instruct! :xml, :version=>"1.0" 
+xml.rss(:version=>"2.0") do
+  xml.channel do
+    xml.title("Рубик")
+    xml.link("http://www.rubyk.ru/")
+    xml.description("Соцмикроблог о Ruby")
+    xml.language('ru')
+    for post in @posts
+      xml.item do
+        xml.title(truncate(strip_tags(markdown(h(post.content))), 20, "..."))
+        xml.description(markdown(h(post.content)))      
+        xml.author(post.author.username)               
+        xml.pubDate(post.created_at.strftime("%a, %d %b %Y %H:%M:%S %z"))
+        xml.link(post_path(post))
+        xml.guid(post_path(post))
+      end
+    end
+  end
+end
+

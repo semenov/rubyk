@@ -1,9 +1,5 @@
 #posts
-  - for post in @posts
-    .post
-      .content
-        = markdown post.content
-      .metadata
-        = nice_date post.created_at
-        = link_to '#', post          
+  = render :partial => "post", :collection => @posts
+  = will_paginate @posts, :prev_label => '&larr;', :next_label => '&rarr;'
+     
 

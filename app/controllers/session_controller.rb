@@ -1,11 +1,15 @@
 class SessionController < ApplicationController
   skip_before_filter :login_required, :only => [:new, :create]
  
+  def info
+    
+  end
+ 
   def new
     consumer = get_consumer
     request_token = consumer.get_request_token( {}, {:scope => "https://www.google.com/m8/feeds/"})
     session[:oauth_secret] = request_token.secret
-    next_url = url_for :action => 'create', :protocol => 'https'
+    next_url = url_for :action => 'create'
     redirect_to request_token.authorize_url + "&oauth_callback=#{next_url}"
   end
  
@@ -19,13 +23,13 @@ class SessionController < ApplicationController
     user.oauth_token  =  access_token.token
     user.oauth_secret =  access_token.secret
     user.save
-    session[:user_id] = user.id
-    redirect_to :controller => 'posts'
+    session[:user] = user
+    redirect_to root_path
   end
  
-  def delete
+  def destroy
     reset_session
     flash[:notice] = "Вы успешно вышли из системы"
-    redirect_to :controller => 'posts'
+    redirect_to root_path
   end
 end

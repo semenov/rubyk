@@ -1,0 +1,13 @@
+.comment
+  .content
+    = markdown h comment.content
+  .metadata 
+    %strong
+      = comment.author.username
+    |    
+    = nice_date comment.created_at   
+    - if user_can_edit? comment
+      |
+      = link_to 'Редактировать', edit_post_comment_path(comment.post, comment) 
+      |
+      = link_to 'Удалить', comment, :confirm => 'Точно удалить?', :method => :delete

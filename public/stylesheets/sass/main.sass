@@ -1,65 +1,117 @@
-!violet = #859
-!violet_hover = !violet - 40
+!main_color = #554a43
+!main_color_hover = !main_color - 40
+!area = #E9E8E2
 
-#header
-  :padding 0 0 1em 0
+img
+  :border-width 0
   
-  h1 
-    :padding 0 0 0.1em 0
-    a
-      :text-decoration none
-      :color = !violet
-      
-      &:hover
-        :color = !violet_hover
-        :background-color #FFF
-      
-    
-#new-post-link a
-  :color #FFF
-  :background-color = !violet
-  :text-decoration none
-  :padding 0.3em
+a
+  :color = !main_color
   
   &:hover
-    :background-color = !violet_hover
+    :color = !main_color_hover 
+    :text-decoration underline  
+    
+h2
+  :font-family Verdana 
+
+
+#header
+  :padding 0 0 1.5em 0
+  :height 7em
+
+    
+  #logo 
+    :margin 0.2em 0 0 0
+    :float left
+
+    
+  #auth
+    :font-size smaller
+    :float right
+    :display inline
+    :padding 1em 0 0 0
+
+
+=button_universal
+  :text-decoration none
+  :padding 0.4em
+  :font-size smaller
+  :font-weight bold
+  :font-family Verdana
+  :margin-right 0.3em
+  :border
+    :width 1px 
+    :color = !main_color
+    :style solid  
+  
+=button
+  a
+    :color #FFF
+    :background-color = !main_color
+    +button_universal    
+    
+    &:hover
+      :background-color = !main_color_hover      
+      
+.button
+  +button    
+    
+#new-post-link 
+  :margin-top 1em
+  :float left
+  +button
+
+
+.pagination
+  +button
+  .disabled
+    :display none
+  .current
+    :color = !main_color
+    +button_universal
 
 
 div
   :padding 0
   :margin 0
     
+body 
+  :margin 2em 5em    
+    
+#notice
+  :color green
+  :margin-bottom 1em
+  
+   
+
 #content
+  :padding-top 0.5em
   h1
     :font-size 1.6em    
     :font-weight normal
+    :padding 0
+    :margin 0
 
-  #posts .post 
-    :padding 1.5em
-    :background-color #EEE
-    :margin 1em 0 1em 0 
-    
-  #post 
-    :padding 1.5em
-    :background-color #EEE  
-    :margin 1em 0 0 0
+  .post, .comment 
+    :padding 2em
+    :background-color = !area
+    :margin 0 0 2em 0 
+
+  .comment 
+    :background-color = !area + #0C0C00
     
   .metadata
-    :font-style italic   
     :color #AAA 
     :font-size smaller
+    :padding-top 0.5em
     
-    a
-      :text-decoration none
-      
-      &:hover
-        :text-decoration underline
     
   .content p
     :font-size 1.2em
     :margin 0 0 0.5em 0
     
-  textarea#post_content
+  textarea
     :width 50%
     :height 150px
     :font-size 1.2em
