@@ -7,8 +7,11 @@
     = render :partial => "comments/comment", :collection => @post.comments
 
 - else
-  %p Комментариев пока нет.
-= link_to 'Комментировать', new_comment_path  
+  %p Комментариев пока нет. 
 
-= render :partial => "comments/form", :locals => { :post => @post, :comment => @comment }
-     
+if logged_in?
+  = render :partial => "comments/form", :locals => { :post => @post, :comment => @comment }
+else
+  .info
+    Для добавления комментариев вы должны 
+    == #{link_to "авторизоваться через Google Аccount", login_path}.     
