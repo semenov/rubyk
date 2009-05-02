@@ -1,8 +1,0 @@
-%h2 Listing comments
-- if !@comments.empty?
-  .comments
-    = render :partial => "comment", :collection => @comments
-  = will_paginate(@comments)
-- else
-  %p There are no comments to show yet.
-= link_to 'New comment', new_comment_path

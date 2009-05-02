@@ -1,4 +1,0 @@
-%h1 Создание записи
-
-= render :partial => "form"
-

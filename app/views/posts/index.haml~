@@ -1,5 +1,0 @@
-#posts
-  = render :partial => "post", :collection => @posts
-  = will_paginate @posts, :prev_label => '&larr;', :next_label => '&rarr;'
-     
-

@@ -1,5 +1,0 @@
-%h2 Редактирование комментария
-= render :partial => "form", :locals => {:post => @comment.post, :comment => @comment}
-%ul
-  %li= link_to 'Show', @comment
-  %li= link_to 'Back', comments_path

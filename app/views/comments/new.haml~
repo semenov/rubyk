@@ -1,4 +1,0 @@
-%h2 New comment
-= render :partial => "form", :locals => {:comment => @comment}
-%ul
-  %li= link_to 'Back', comments_path
