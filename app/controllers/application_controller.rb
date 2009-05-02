@@ -31,20 +31,14 @@ class ApplicationController < ActionController::Base
     end
   end    
   
-  CONSUMER_KEY = "ruby.heroku.com"
-  CONSUMER_SECRET = "gNBMNP7XzqazR+cENz0pVSz+"
-  PATH_TO_PRIVATE_KEY = File.join(RAILS_ROOT, "config", "rsakey.pem")
- 
   def get_consumer
     require 'oauth/consumer'
     require 'oauth/signature/rsa/sha1'
-    consumer = OAuth::Consumer.new(CONSUMER_KEY, CONSUMER_SECRET, {
+    consumer = OAuth::Consumer.new(ENV['GOOGLE_OAUTH_KEY'], ENV['GOOGLE_OAUTH_SECRET'], {
       :site => "https://www.google.com",
       :request_token_path => "/accounts/OAuthGetRequestToken",
       :access_token_path => "/accounts/OAuthGetAccessToken",
-      :authorize_path=> "/accounts/OAuthAuthorizeToken",
-      :signature_method => "RSA-SHA1",
-      :private_key_file => PATH_TO_PRIVATE_KEY})
+      :authorize_path=> "/accounts/OAuthAuthorizeToken"})
   end
 
 

@@ -27,80 +27,83 @@ h2 {
     font-size: smaller;
     float: right;
     display: inline;
-    padding: 1em 0 0 0; }
+    padding: 45px 0 0 0; }
 
 .button a[href] {
-  color: #FFF;
-  background-color: #554a43;
+  color: #554a43;
   text-decoration: none;
   padding: 0.4em 0.6em 0.4em 0.6em;
   font-size: smaller;
   font-weight: bold;
-  font-family: Verdana; }
+  font-family: Verdana;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #FFF; }
   .button a[href]:hover {
-    background-color: #2d221b; }
+    border-color: #554a43; }
 
 ul#menu {
   list-style: none;
   padding: 0;
-  margin: 40px 0 0 2em;
+  margin: 42px 0 0 2em;
   float: left; }
   ul#menu li {
     float: left;
-    margin: 0 0.3em; }
-    ul#menu li a[href] {
-      color: #FFF;
-      background-color: #554a43;
-      text-decoration: none;
-      padding: 0.4em 0.6em 0.4em 0.6em;
-      font-size: smaller;
-      font-weight: bold;
-      font-family: Verdana; }
-      ul#menu li a[href]:hover {
-        background-color: #2d221b; }
+    margin: 0 0.3em;
+    font-size: smaller;
+    font-weight: bold;
+    font-family: Verdana; }
     ul#menu li .current {
       display: inline;
-      color: #554a43;
-      text-decoration: none;
-      padding: 0.4em 0.6em 0.4em 0.6em;
-      font-size: smaller;
-      font-weight: bold;
-      font-family: Verdana; }
+      color: #FFF;
+      background-color: #554a43;
+      border-color: #554a43; }
+    ul#menu li a, ul#menu li .current {
+      padding: 0.4em 0.6em 0.4em 0.6em; }
 
 #new-post-link {
   margin-top: 1em;
   float: left; }
   #new-post-link a[href] {
-    color: #FFF;
-    background-color: #554a43;
+    color: #554a43;
     text-decoration: none;
     padding: 0.4em 0.6em 0.4em 0.6em;
     font-size: smaller;
     font-weight: bold;
-    font-family: Verdana; }
+    font-family: Verdana;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #FFF; }
     #new-post-link a[href]:hover {
-      background-color: #2d221b; }
+      border-color: #554a43; }
 
 .pagination a[href] {
+  color: #554a43;
+  text-decoration: none;
+  padding: 0.4em 0.6em 0.4em 0.6em;
+  font-size: smaller;
+  font-weight: bold;
+  font-family: Verdana;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #FFF; }
+  .pagination a[href]:hover {
+    border-color: #554a43; }
+.pagination .disabled {
+  display: none; }
+.pagination a, .pagination .current {
+  margin-right: 0.4em; }
+.pagination .current {
   color: #FFF;
   background-color: #554a43;
   text-decoration: none;
   padding: 0.4em 0.6em 0.4em 0.6em;
   font-size: smaller;
   font-weight: bold;
-  font-family: Verdana; }
-  .pagination a[href]:hover {
-    background-color: #2d221b; }
-.pagination .disabled {
-  display: none; }
-.pagination .current {
-  color: #554a43;
-  margin-right: 0.3em;
-  text-decoration: none;
-  padding: 0.4em 0.6em 0.4em 0.6em;
-  font-size: smaller;
-  font-weight: bold;
-  font-family: Verdana; }
+  font-family: Verdana;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #FFF; }
 
 #notice {
   color: green;

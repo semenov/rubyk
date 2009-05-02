@@ -38,7 +38,7 @@ h2
     :font-size smaller
     :float right
     :display inline
-    :padding 1em 0 0 0
+    :padding 45px 0 0 0
 
 
 =button_universal
@@ -47,19 +47,20 @@ h2
   :font-size smaller
   :font-weight bold
   :font-family Verdana
-  //:border
-    //:width 1px 
-    //:color = !main_color
-    //:style solid  
+  :border
+    :width 1px
+    :style solid
+    :color #FFF    
+
   
 =button
   a[href]
-    :color #FFF
-    :background-color = !main_color
+    :color = !main_color
     +button_universal    
     
     &:hover
-      :background-color = !main_color_hover      
+      //:text-decoration underline     
+      :border-color = !main_color       
       
 .button
   +button    
@@ -67,17 +68,21 @@ h2
 ul#menu
   :list-style none
   :padding 0
-  :margin 40px 0 0 2em
+  :margin 42px 0 0 2em
   :float left
   li
-    +button   
     :float left
     :margin 0 0.3em
+    :font-size smaller
+    :font-weight bold
+    :font-family Verdana    
     .current
       :display inline
-      :color = !main_color
-      //:background-color = !area
-      +button_universal
+      :color #FFF
+      :background-color = !main_color
+      :border-color = !main_color
+    a, .current
+      :padding 0.4em 0.6em 0.4em 0.6em
     
 #new-post-link 
   :margin-top 1em
@@ -89,9 +94,11 @@ ul#menu
   +button
   .disabled
     :display none
+  a, .current
+    :margin-right 0.4em
   .current
-    :color = !main_color
-    :margin-right 0.3em
+    :color #FFF
+    :background-color = !main_color
     +button_universal
 
 

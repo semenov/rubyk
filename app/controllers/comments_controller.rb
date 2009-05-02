@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
 
-  before_filter :find_comment
+  before_filter :find_object
   before_filter :login_required, :except => [:index, :show]
 
   def index
@@ -76,7 +76,7 @@ class CommentsController < ApplicationController
 
   private
 
-  def find_comment
+  def find_object
     @comment = Comment.find(params[:id]) if params[:id]
   end
 
