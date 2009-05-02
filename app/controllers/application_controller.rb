@@ -38,7 +38,10 @@ class ApplicationController < ActionController::Base
       :site => "https://www.google.com",
       :request_token_path => "/accounts/OAuthGetRequestToken",
       :access_token_path => "/accounts/OAuthGetAccessToken",
-      :authorize_path=> "/accounts/OAuthAuthorizeToken"})
+      :authorize_path=> "/accounts/OAuthAuthorizeToken",
+      :signature_method => "RSA-SHA1",
+      :private_key_file => Rails.root.join("config/certificates/rsakey.pem")
+      })
   end
 
 
