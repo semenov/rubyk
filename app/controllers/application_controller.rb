@@ -10,7 +10,8 @@ class ApplicationController < ActionController::Base
   
   def login_required
     if !current_user
-      redirect_to auth_info_path
+      #redirect_to auth_info_path
+      render :template => "pages/auth_info"
     end
   end
   

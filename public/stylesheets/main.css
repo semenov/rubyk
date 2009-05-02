@@ -1,3 +1,10 @@
+div {
+  padding: 0;
+  margin: 0; }
+
+body {
+  margin: 40px 80px; }
+
 img {
   border-width: 0; }
 
@@ -14,7 +21,7 @@ h2 {
   padding: 0 0 1.5em 0;
   height: 7em; }
   #header #logo {
-    margin: 0.2em 0 0 0;
+    margin: 0;
     float: left; }
   #header #auth {
     font-size: smaller;
@@ -26,16 +33,39 @@ h2 {
   color: #FFF;
   background-color: #554a43;
   text-decoration: none;
-  padding: 0.4em;
+  padding: 0.4em 0.6em 0.4em 0.6em;
   font-size: smaller;
   font-weight: bold;
-  font-family: Verdana;
-  margin-right: 0.3em;
-  border-width: 1px;
-  border-color: #554a43;
-  border-style: solid; }
+  font-family: Verdana; }
   .button a[href]:hover {
     background-color: #2d221b; }
+
+ul#menu {
+  list-style: none;
+  padding: 0;
+  margin: 40px 0 0 2em;
+  float: left; }
+  ul#menu li {
+    float: left;
+    margin: 0 0.3em; }
+    ul#menu li a[href] {
+      color: #FFF;
+      background-color: #554a43;
+      text-decoration: none;
+      padding: 0.4em 0.6em 0.4em 0.6em;
+      font-size: smaller;
+      font-weight: bold;
+      font-family: Verdana; }
+      ul#menu li a[href]:hover {
+        background-color: #2d221b; }
+    ul#menu li .current {
+      display: inline;
+      color: #554a43;
+      text-decoration: none;
+      padding: 0.4em 0.6em 0.4em 0.6em;
+      font-size: smaller;
+      font-weight: bold;
+      font-family: Verdana; }
 
 #new-post-link {
   margin-top: 1em;
@@ -44,14 +74,10 @@ h2 {
     color: #FFF;
     background-color: #554a43;
     text-decoration: none;
-    padding: 0.4em;
+    padding: 0.4em 0.6em 0.4em 0.6em;
     font-size: smaller;
     font-weight: bold;
-    font-family: Verdana;
-    margin-right: 0.3em;
-    border-width: 1px;
-    border-color: #554a43;
-    border-style: solid; }
+    font-family: Verdana; }
     #new-post-link a[href]:hover {
       background-color: #2d221b; }
 
@@ -59,36 +85,22 @@ h2 {
   color: #FFF;
   background-color: #554a43;
   text-decoration: none;
-  padding: 0.4em;
+  padding: 0.4em 0.6em 0.4em 0.6em;
   font-size: smaller;
   font-weight: bold;
-  font-family: Verdana;
-  margin-right: 0.3em;
-  border-width: 1px;
-  border-color: #554a43;
-  border-style: solid; }
+  font-family: Verdana; }
   .pagination a[href]:hover {
     background-color: #2d221b; }
 .pagination .disabled {
   display: none; }
 .pagination .current {
   color: #554a43;
+  margin-right: 0.3em;
   text-decoration: none;
-  padding: 0.4em;
+  padding: 0.4em 0.6em 0.4em 0.6em;
   font-size: smaller;
   font-weight: bold;
-  font-family: Verdana;
-  margin-right: 0.3em;
-  border-width: 1px;
-  border-color: #554a43;
-  border-style: solid; }
-
-div {
-  padding: 0;
-  margin: 0; }
-
-body {
-  margin: 2em 5em; }
+  font-family: Verdana; }
 
 #notice {
   color: green;

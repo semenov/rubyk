@@ -4,16 +4,26 @@
     %title Рубик &mdash; социальный микроблог о Ruby
     = stylesheet_link_tag 'scaffold'
     = stylesheet_link_tag 'main'
-    %meta{ :name => "verify-v1", :content => "O4WFIMbJI3wxKAlvEABozYFjcyvP5DrOye2kT4+8oBc=" }
+    %meta{ :name => "verify-v1", :content => "D3fhrtcjF+WBLd1QzniZK0YJWTpz+Nuox9GQDNizklQ=" }
     = auto_discovery_link_tag :rss, feed_url
   %body
     #header
       #logo
         - link_to root_path, :title => "Социальный микроблог о Ruby" do
           = image_tag "rubyk.gif", :alt => "Рубик"
-          
-      #new-post-link
-        = link_to 'новая заметка', new_post_path            
+      
+      /    
+        #new-post-link
+          = link_to 'новая заметка', new_post_path       
+        
+      - menu = [ ["заметки", root_path], ["написать", new_post_path], ["что это?", about_path] ]
+      %ul#menu
+        - for item in menu 
+          %li
+            - if current_page? item.last
+              .current= item.first
+            - else
+              = link_to item.first, item.last
 
       #auth    
         - if logged_in?

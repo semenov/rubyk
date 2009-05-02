@@ -3,10 +3,11 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :posts, :as => 'notes', :has_many => :comments
   #map.resources :comments
   
-  map.login  '/login',  :controller => 'session', :action => 'new'
-  map.logout '/logout', :controller => 'session', :action => 'destroy'
-  map.auth_info '/auth_info', :controller => 'session', :action => 'info'
-  map.feed  '/feed', :controller => 'posts', :action => 'feed'
+  map.login  'login',  :controller => 'session', :action => 'new'
+  map.logout 'logout', :controller => 'session', :action => 'destroy'
+  map.auth_info 'auth_info', :controller => 'pages', :action => 'auth_info'
+  map.about 'about', :controller => 'pages', :action => 'about'
+  map.feed  'feed', :controller => 'posts', :action => 'feed'
   
   
   map.connect ':controller/:action/:id'
