@@ -1,11 +1,10 @@
 class PostsController < ApplicationController
 
+  before_filter :find_object
   before_filter :login_required, :except => [:index, :show]
   
-  # GET /posts
-  # GET /posts.xml
   def index
-    @posts = Post.published.paginate :page => params[:page], :per_page => 10
+    @posts = Post.published.paginate :page => params[:page], :per_page => 2
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,10 +12,7 @@ class PostsController < ApplicationController
     end
   end
 
-  # GET /posts/1
-  # GET /posts/1.xml
   def show
-    @post = Post.find(params[:id])
     @comment = Comment.new
 
     respond_to do |format|
@@ -25,8 +21,6 @@ class PostsController < ApplicationController
     end
   end
 
-  # GET /posts/new
-  # GET /posts/new.xml
   def new
     @post = Post.new
 
@@ -36,8 +30,6 @@ class PostsController < ApplicationController
     end
   end
 
-  # POST /posts
-  # POST /posts.xml
   def create 
     @post = Post.new(params[:post])
     @post.published = true
@@ -56,9 +48,7 @@ class PostsController < ApplicationController
   end
   
 
-  def edit
-    @post = Post.find(params[:id])
-    
+  def edit   
     respond_to do |format|
       format.html 
       format.xml  { render :xml => @post }
@@ -67,7 +57,6 @@ class PostsController < ApplicationController
   
 
   def update
-    @post = Post.find(params[:id])
     return redirect_to root_path if !user_can_edit? @post
     respond_to do |format|
       if @post.update_attributes(params[:post])
@@ -83,7 +72,6 @@ class PostsController < ApplicationController
   
 
   def destroy
-    @post = Post.find(params[:id])
     return redirect_to root_path if !user_can_edit? @post
     @post.destroy
     
@@ -101,5 +89,10 @@ class PostsController < ApplicationController
     render :action => "feed", :layout => false
   end
   
+  private
+
+  def find_object
+    @post = Post.find(params[:id]) if params[:id]
+  end  
 
 end

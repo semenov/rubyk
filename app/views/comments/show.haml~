@@ -1,4 +1,4 @@
 = render :partial => "comment", :locals => { :comment => @comment }
 %p
-  == Этот комментарий был оставлен к следующей #{link_to "заметке", @comment.post}:
+  Этот комментарий был оставлен к следующей заметке:
 = render :partial => "posts/post", :locals => { :post => @comment.post }

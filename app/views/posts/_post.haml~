@@ -7,9 +7,9 @@
     |    
     = nice_date post.created_at
     |
-    = link_to '#', post     
+    = link_to '#', post, :title => "Постоянная ссылка"     
     | 
-    = link_to "[#{post.comments_count}]", post      
+    = link_to "(#{post.comments_count})", :url => post, :anchor => "comments", :protocol => "https" #, :title => "Комментарии"
     - if user_can_edit? post
       |
       = link_to 'Редактировать', edit_post_path(post) 

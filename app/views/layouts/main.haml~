@@ -5,6 +5,7 @@
     = stylesheet_link_tag 'scaffold'
     = stylesheet_link_tag 'main'
     %meta{ :name => "verify-v1", :content => "O4WFIMbJI3wxKAlvEABozYFjcyvP5DrOye2kT4+8oBc=" }
+    = auto_discovery_link_tag :rss, feed_url
   %body
     #header
       #logo

@@ -1,9 +1,9 @@
 img {
   border-width: 0; }
 
-a {
+a[href] {
   color: #554a43; }
-  a:hover {
+  a[href]:hover {
     color: #2d221b;
     text-decoration: underline; }
 
@@ -22,7 +22,7 @@ h2 {
     display: inline;
     padding: 1em 0 0 0; }
 
-.button a {
+.button a[href] {
   color: #FFF;
   background-color: #554a43;
   text-decoration: none;
@@ -34,13 +34,13 @@ h2 {
   border-width: 1px;
   border-color: #554a43;
   border-style: solid; }
-  .button a:hover {
+  .button a[href]:hover {
     background-color: #2d221b; }
 
 #new-post-link {
   margin-top: 1em;
   float: left; }
-  #new-post-link a {
+  #new-post-link a[href] {
     color: #FFF;
     background-color: #554a43;
     text-decoration: none;
@@ -52,10 +52,10 @@ h2 {
     border-width: 1px;
     border-color: #554a43;
     border-style: solid; }
-    #new-post-link a:hover {
+    #new-post-link a[href]:hover {
       background-color: #2d221b; }
 
-.pagination a {
+.pagination a[href] {
   color: #FFF;
   background-color: #554a43;
   text-decoration: none;
@@ -67,7 +67,7 @@ h2 {
   border-width: 1px;
   border-color: #554a43;
   border-style: solid; }
-  .pagination a:hover {
+  .pagination a[href]:hover {
     background-color: #2d221b; }
 .pagination .disabled {
   display: none; }

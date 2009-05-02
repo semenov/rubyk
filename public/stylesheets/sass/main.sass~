@@ -5,7 +5,7 @@
 img
   :border-width 0
   
-a
+a[href]
   :color = !main_color
   
   &:hover
@@ -80,7 +80,8 @@ body
   :margin 2em 5em    
     
 #notice
-  color: green
+  :color green
+  :margin-bottom 1em
   
    
 

@@ -6,8 +6,10 @@
       = comment.author.username
     |    
     = nice_date comment.created_at   
+    |
+    = link_to '#', post_path(comment.post, :anchor => "comment-#{comment.id}"), :title => "Постоянная ссылка"         
     - if user_can_edit? comment
       |
       = link_to 'Редактировать', edit_post_comment_path(comment.post, comment) 
       |
-      = link_to 'Удалить', comment, :confirm => 'Точно удалить?', :method => :delete
+      = link_to 'Удалить', post_comment_path(comment.post, comment), :confirm => 'Точно удалить?', :method => :delete

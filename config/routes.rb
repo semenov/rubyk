@@ -1,7 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
   map.root :controller => 'posts'
-  map.resources :posts, :has_many => :comments
-  map.resources :comments
+  map.resources :posts, :as => 'notes', :has_many => :comments
+  #map.resources :comments
   
   map.login  '/login',  :controller => 'session', :action => 'new'
   map.logout '/logout', :controller => 'session', :action => 'destroy'

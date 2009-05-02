@@ -1,17 +1,19 @@
 #post
   = render :partial => "post", :locals => { :post => @post }
-  
+
+
 %h2 Комментарии
-- if !@post.comments.empty?
-  .comments
-    = render :partial => "comments/comment", :collection => @post.comments
+%a{ :name => "comments" }
+  - if !@post.comments.empty?
+    .comments
+      = render :partial => "comments/comment", :collection => @post.comments
 
-- else
-  %p Комментариев пока нет. 
+  - else
+    %p Комментариев пока нет. 
 
-if logged_in?
+- if logged_in?
   = render :partial => "comments/form", :locals => { :post => @post, :comment => @comment }
-else
+- else
   .info
     Для добавления комментариев вы должны 
     == #{link_to "авторизоваться через Google Аccount", login_path}.     

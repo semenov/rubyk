@@ -1,14 +1,20 @@
 class CommentsController < ApplicationController
 
   before_filter :find_comment
-
-  COMMENTS_PER_PAGE = 20
+  before_filter :login_required, :except => [:index, :show]
 
   def index
-    @comments = Comment.paginate(:order => "created_at DESC", :page => params[:page], :per_page => COMMENTS_PER_PAGE)
+    @comments = Comment.paginate(:order => "created_at DESC", :page => params[:page], :per_page => 10)
     respond_to do |format|
       format.html
       format.xml  { render :xml => @comments }
+    end
+  end
+
+  def show
+    respond_to do |format|
+      format.html
+      format.xml  { render :xml => @comment }
     end
   end
 
@@ -36,24 +42,11 @@ class CommentsController < ApplicationController
     end
   end
 
-  def destroy
-    respond_to do |format|
-      if @comment.destroy
-        flash[:notice] = 'Комментарий удален.'        
-        format.html { redirect_to @comment.post }
-        format.xml  { head :ok }
-      else
-        flash[:error] = 'Comment could not be destroyed.'
-        format.html { redirect_to @comment }
-        format.xml  { head :unprocessable_entity }
-      end
-    end
-  end
-
   def edit
   end
 
   def update
+    return redirect_to root_path if !user_can_edit? @comment
     respond_to do |format|
       if @comment.update_attributes(params[:comment])
         flash[:notice] = 'Комментарий сохранен.'
@@ -66,14 +59,20 @@ class CommentsController < ApplicationController
     end
   end
 
-  def show
+  def destroy
+    return redirect_to root_path if !user_can_edit? @comment
     respond_to do |format|
-      format.html
-      format.xml  { render :xml => @comment }
+      if @comment.destroy
+        flash[:notice] = 'Комментарий удален.'        
+        format.html { redirect_to @comment.post }
+        format.xml  { head :ok }
+      else
+        flash[:error] = 'Comment could not be destroyed.'
+        format.html { redirect_to @comment }
+        format.xml  { head :unprocessable_entity }
+      end
     end
   end
-
-
 
   private
 
