@@ -49,10 +49,10 @@
     #footer
       .copyright
         &copy; Владислав Семенов 
+        |
+        = link_to "Письмо автору", "mailto:vladislav.semenov@gmail.com"
         | 
-        = link_to 'vladislav.semenov@gmail.com', 'mailto:vladislav.semenov@gmail.com'
-        | 
-        = link_to 'Рубик на GitHub'е', 'http://github.com/semenov/rubyk'
+        = link_to "Рубик на GitHub'е", "http://github.com/semenov/rubyk"
       .counter
         = render :partial => 'layouts/li'
     = render :partial => 'layouts/analytics'
