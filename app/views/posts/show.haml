@@ -2,13 +2,13 @@
   = render :partial => "post", :locals => { :post => @post }
 
 %a{ :name => "comments" }
-  %h2 Комментарии
-  - if !@post.comments.empty?
-    .comments
-      = render :partial => "comments/comment", :collection => @post.comments
+%h2 Комментарии
+- if !@post.comments.empty?
+  .comments
+    = render :partial => "comments/comment", :collection => @post.comments
 
-  - else
-    %p Комментариев пока нет. 
+- else
+  %p Комментариев пока нет. 
 
 - if logged_in?
   = render :partial => "comments/form", :locals => { :post => @post, :comment => @comment }
