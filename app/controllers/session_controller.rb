@@ -1,29 +1,40 @@
+require 'openid/extensions/ax'
+require 'openid/store/filesystem'
+
 class SessionController < ApplicationController
   skip_before_filter :login_required, :only => [:new, :create]
- 
-  def info
-    
-  end
- 
+  
   def new
-    consumer = get_consumer
-    request_token = consumer.get_request_token( {}, {:scope => "https://www.google.com/m8/feeds/"})
-    session[:oauth_secret] = request_token.secret
-    next_url = url_for :action => 'create'
-    redirect_to request_token.authorize_url + "&oauth_callback=#{next_url}"
+    oidreq = consumer.begin("https://www.google.com/accounts/o8/id")
+
+    axreq = OpenID::AX::FetchRequest.new
+    axreq.ns_alias = "ext1"
+    single_attribute = OpenID::AX::AttrInfo.new("http://axschema.org/contact/email", "email", true)
+    axreq.add(single_attribute)
+    oidreq.add_extension(axreq)
+
+    return_to = url_for :action => 'create', :only_path => false
+    realm = root_url
+    
+    redirect_to oidreq.redirect_url(realm, return_to) 
   end
  
   def create
-    request_token = OAuth::RequestToken.new(get_consumer, params[:oauth_token], session[:oauth_secret])
-    access_token = request_token.get_access_token
-    xml = XmlSimple.xml_in(access_token.get("https://www.google.com/m8/feeds/contacts/default/full/").body)
-    email = xml["author"].first["email"].first
-    user = User.find_or_create_by_email(email)
-    user.name = xml["author"].first["name"].first
-    user.oauth_token  =  access_token.token
-    user.oauth_secret =  access_token.secret
-    user.save
-    session[:user] = user
+    current_url = url_for(:action => 'create', :only_path => false)
+    parameters = params.reject{ |k, v| request.path_parameters[k] }
+    oidresp = consumer.complete(parameters, current_url)
+    
+    if oidresp.status == OpenID::Consumer::SUCCESS
+      ax_resp = OpenID::AX::FetchResponse.from_success_response(oidresp)
+      email = ax_resp['http://axschema.org/contact/email']
+      user = User.find_or_create_by_email(email)
+      user.open_id = oidresp.display_identifier
+      user.save(false)
+      session[:user_id] = user.id
+    else
+      flash[:notice] = "Авторизоваться через Google Account не удалось."    
+    end
+    
     redirect_to root_path
   end
  
@@ -32,4 +43,16 @@ class SessionController < ApplicationController
     flash[:notice] = "Вы успешно вышли из системы"
     redirect_to root_path
   end
+  
+  private
+
+  def consumer
+    if @consumer.nil?
+      store = ActiveRecordStore.new
+      @consumer = OpenID::Consumer.new(session, store)
+    end
+    return @consumer
+  end
+  
+  
 end

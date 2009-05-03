@@ -1,10 +1,22 @@
 - form_for([post, comment]) do |f|
+  = error_messages_for :user, :object => current_user
   = f.error_messages
+  
+  - if current_user.name.nil?
+    %p
+      .tip
+        Ваше полное 
+        %strong имя 
+        и 
+        %strong фамилия
+      = text_field :user, :name  
+  
   %p
     .tip
       Используйте 
       =link_to('Markdown', 'http://ru.wikipedia.org/wiki/Markdown')
       для разметки
     = f.text_area :content
+    
   %p
     = f.submit "Отправить"

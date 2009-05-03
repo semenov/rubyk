@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090501223845) do
+ActiveRecord::Schema.define(:version => 20090503115534) do
 
   create_table "comments", :force => true do |t|
     t.text     "content"
@@ -17,6 +17,21 @@ ActiveRecord::Schema.define(:version => 20090501223845) do
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "open_id_associations", :force => true do |t|
+    t.string  "server_url"
+    t.string  "handle"
+    t.binary  "secret"
+    t.integer "issued"
+    t.integer "lifetime"
+    t.string  "assoc_type"
+  end
+
+  create_table "open_id_nonces", :force => true do |t|
+    t.string  "server_url"
+    t.integer "timestamp"
+    t.string  "salt"
   end
 
   create_table "posts", :force => true do |t|
@@ -31,11 +46,10 @@ ActiveRecord::Schema.define(:version => 20090501223845) do
   create_table "users", :force => true do |t|
     t.string   "name"
     t.string   "email"
-    t.string   "oauth_token"
-    t.string   "oauth_secret"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "admin"
+    t.string   "open_id"
   end
 
 end

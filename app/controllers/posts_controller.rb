@@ -23,7 +23,6 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
-
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @post }
@@ -34,10 +33,16 @@ class PostsController < ApplicationController
     @post = Post.new(params[:post])
     @post.published = true
     @post.author = current_user
-
+    
+    if params.has_key?(:user)
+      current_user.name = params[:user][:name] if !params[:user][:name].empty?
+      current_user.save
+    end
+    
     respond_to do |format|
-      if @post.save
-        flash[:notice] = 'Запись успешно создана.'
+      if @post.valid? && current_user.valid?
+        @post.save
+        flash[:notice] = 'Заметка успешно создана.'
         format.html { redirect_to(@post) }
         format.xml  { render :xml => @post, :status => :created, :location => @post }
       else
@@ -60,7 +65,7 @@ class PostsController < ApplicationController
     return redirect_to root_path if !user_can_edit? @post
     respond_to do |format|
       if @post.update_attributes(params[:post])
-        flash[:notice] = 'Запись успешно сохранена.'
+        flash[:notice] = 'Заметка успешно сохранена.'
         format.html { redirect_to(@post) }
         format.xml  { head :ok }
       else
@@ -75,7 +80,7 @@ class PostsController < ApplicationController
     return redirect_to root_path if !user_can_edit? @post
     @post.destroy
     
-    flash[:notice] = 'Запись успешно удалена.'
+    flash[:notice] = 'Заметка успешно удалена.'
     
     respond_to do |format|
       format.html { redirect_to(root_path) }

@@ -1,5 +1,15 @@
 - form_for(@post) do |f|
+  = error_messages_for :user, :object => current_user
   = f.error_messages
+  
+  - if current_user.name.nil?
+    %p
+      .tip
+        Ваше полное 
+        %strong имя 
+        и 
+        %strong фамилия
+      = text_field :user, :name
 
   %p
     .tip

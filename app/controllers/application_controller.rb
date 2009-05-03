@@ -16,7 +16,9 @@ class ApplicationController < ActionController::Base
   end
   
   def current_user
-      session[:user]
+    return nil if !session[:user_id]
+    @current_user = User.find(session[:user_id]) if @current_user.nil?
+    return @current_user
   end
   
   def logged_in?
@@ -30,20 +32,6 @@ class ApplicationController < ActionController::Base
       false
     end
   end    
-  
-  def get_consumer
-    require 'oauth/consumer'
-    require 'oauth/signature/rsa/sha1'
-    consumer = OAuth::Consumer.new(ENV['GOOGLE_OAUTH_KEY'], ENV['GOOGLE_OAUTH_SECRET'], {
-      :site => "https://www.google.com",
-      :request_token_path => "/accounts/OAuthGetRequestToken",
-      :access_token_path => "/accounts/OAuthGetAccessToken",
-      :authorize_path=> "/accounts/OAuthAuthorizeToken",
-      :signature_method => "RSA-SHA1",
-      :private_key_file => Rails.root.join("config/certificates/rsakey.pem")
-      })
-  end
-
 
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password

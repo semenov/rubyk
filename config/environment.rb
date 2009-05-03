@@ -22,7 +22,7 @@ Rails::Initializer.run do |config|
   
   config.gem "haml"
   config.gem "rdiscount"  
-  config.gem "oauth" 
+  config.gem "ruby-openid", :lib => "openid" 
   config.gem "xml-simple", :lib => "xmlsimple"
   config.gem "will_paginate"
 

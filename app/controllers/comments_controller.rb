@@ -30,8 +30,15 @@ class CommentsController < ApplicationController
     @comment = Comment.new(params[:comment])
     @comment.author = current_user
     @comment.post = Post.find params[:post_id]
+    
+    if params.has_key?(:user)
+      current_user.name = params[:user][:name] if !params[:user][:name].empty?
+      current_user.save
+    end
+        
     respond_to do |format|
-      if @comment.save
+      if @comment.valid? && current_user.valid? 
+        @comment.save
         flash[:notice] = 'Комментарий добавлен.'
         format.html { redirect_to @comment.post }
         format.xml  { render :xml => @comment, :status => :created, :location => @comment }
