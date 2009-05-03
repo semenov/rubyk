@@ -25,8 +25,7 @@ class SessionController < ApplicationController
     
     if oidresp.status == OpenID::Consumer::SUCCESS
       ax_resp = OpenID::AX::FetchResponse.from_success_response(oidresp)
-      email = ax_resp['http://axschema.org/contact/email'].first
-      debugger
+      email = ax_resp['http://axschema.org/contact/email'].firsts
       user = User.find_or_create_by_email(email)
       user.open_id = oidresp.display_identifier
       user.save(false)
