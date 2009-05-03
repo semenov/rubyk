@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 
   before_filter :find_object
-  before_filter :login_required, :except => [:index, :show]
+  before_filter :login_required, :except => [:index, :show, :feed]
   
   def index
     @posts = Post.published.paginate :page => params[:page], :per_page => 10
