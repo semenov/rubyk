@@ -2,7 +2,7 @@
 !main_color_hover = !main_color - 40
 !area = #E9E8E2
 
-
+h
 div
   :padding 0
   :margin 0
@@ -13,12 +13,17 @@ body
 img
   :border-width 0
   
-a[href]
+a
   :color = !main_color
   
   &:hover
     :color = !main_color_hover 
     :text-decoration underline  
+    
+a[name]
+  :text-decoration inherit
+  :color inherit 
+  :background inherit  
     
 h2
   :font-family Verdana 
@@ -54,7 +59,7 @@ h2
 
   
 =button
-  a[href]
+  a
     :color = !main_color
     +button_universal    
     
@@ -152,5 +157,9 @@ ul#menu
     :background-color #DDD
     
 #footer
-  :padding 2em 0 2em 0    
-
+  :padding 2em 0 2em 0  
+  .copyright
+    :float left  
+    :margin-top 10px
+  .counter
+    :float right

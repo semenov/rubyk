@@ -1,3 +1,4 @@
+
 div {
   padding: 0;
   margin: 0; }
@@ -8,11 +9,16 @@ body {
 img {
   border-width: 0; }
 
-a[href] {
+a {
   color: #554a43; }
-  a[href]:hover {
+  a:hover {
     color: #2d221b;
     text-decoration: underline; }
+
+a[name] {
+  text-decoration: inherit;
+  color: inherit;
+  background: inherit; }
 
 h2 {
   font-family: Verdana; }
@@ -29,7 +35,7 @@ h2 {
     display: inline;
     padding: 45px 0 0 0; }
 
-.button a[href] {
+.button a {
   color: #554a43;
   text-decoration: none;
   padding: 0.4em 0.6em 0.4em 0.6em;
@@ -39,7 +45,7 @@ h2 {
   border-width: 1px;
   border-style: solid;
   border-color: #FFF; }
-  .button a[href]:hover {
+  .button a:hover {
     border-color: #554a43; }
 
 ul#menu {
@@ -64,7 +70,7 @@ ul#menu {
 #new-post-link {
   margin-top: 1em;
   float: left; }
-  #new-post-link a[href] {
+  #new-post-link a {
     color: #554a43;
     text-decoration: none;
     padding: 0.4em 0.6em 0.4em 0.6em;
@@ -74,10 +80,10 @@ ul#menu {
     border-width: 1px;
     border-style: solid;
     border-color: #FFF; }
-    #new-post-link a[href]:hover {
+    #new-post-link a:hover {
       border-color: #554a43; }
 
-.pagination a[href] {
+.pagination a {
   color: #554a43;
   text-decoration: none;
   padding: 0.4em 0.6em 0.4em 0.6em;
@@ -87,7 +93,7 @@ ul#menu {
   border-width: 1px;
   border-style: solid;
   border-color: #FFF; }
-  .pagination a[href]:hover {
+  .pagination a:hover {
     border-color: #554a43; }
 .pagination .disabled {
   display: none; }
@@ -144,3 +150,8 @@ ul#menu {
 
 #footer {
   padding: 2em 0 2em 0; }
+  #footer .copyright {
+    float: left;
+    margin-top: 10px; }
+  #footer .counter {
+    float: right; }
