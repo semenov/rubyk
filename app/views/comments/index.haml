@@ -4,7 +4,7 @@
       .post
         .content
           = markdown h comment.post.content    
-        = render :partial => "comment", :locals => { :comment => comment}
-  = will_paginate(@comments)
+        = render :partial => "comment", :locals => { :comment => comment }
+  = will_paginate @comments, :prev_label => '&laquo;', :next_label => '&raquo;'
 - else
   %p Пока комментариев нет.
