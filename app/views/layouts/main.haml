@@ -16,7 +16,7 @@
         #new-post-link
           = link_to 'новая заметка', new_post_path       
         
-      - menu = [ ["заметки", root_path], ["написать", new_post_path], ["что это?", about_path] ]
+      - menu = [ ["заметки", root_path], ["написать", new_post_path], ["комментарии", comments_path], ["что это?", about_path] ]
       %ul#menu
         - for item in menu 
           %li
