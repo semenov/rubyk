@@ -66,6 +66,8 @@ ul#menu {
       border-color: #554a43; }
     ul#menu li a, ul#menu li .current {
       padding: 0.4em 0.6em 0.4em 0.6em; }
+    ul#menu li img {
+      vertical-align: middle; }
 
 #new-post-link {
   margin-top: 1em;

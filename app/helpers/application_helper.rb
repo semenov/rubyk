@@ -9,4 +9,14 @@ module ApplicationHelper
   def nice_date(date)
     date.strftime("%H:%M %d.%m.%Y") # %Y.%m.%d %H:%M
   end
+  
+  def menu_items
+    [ 
+      ["заметки", root_path], 
+      ["написать", new_post_path], 
+      ["комментарии", comments_path], 
+      ["что это?", about_path],
+      [image_tag("feed.png"), feed_path] 
+    ]
+  end
 end
