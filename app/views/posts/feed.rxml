@@ -13,14 +13,14 @@ xml.rss(:version=>"2.0") do
         xml.description(
           markdown(h(post.content)) + 
           link_to(
-            image_tag(count_post_comments_path(post, :format => :png), :title => "Комментарии"), 
-            post_path(post, :anchor => "comments")
+            image_tag(count_post_comments_url(post, :format => :png), :title => "Комментарии", :alt => "Комментарии"), 
+            post_url(post, :anchor => "comments")
           )
         )      
         xml.author(post.author.name)               
         xml.pubDate(post.created_at.strftime("%a, %d %b %Y %H:%M:%S %z"))
-        xml.link(post_path(post))
-        xml.guid(post_path(post))
+        xml.link(post_url(post))
+        xml.guid(post_url(post))
       end
     end
   end
