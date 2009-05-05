@@ -27,9 +27,10 @@ class CommentsController < ApplicationController
     respond_to do |format|
       format.html { render :text => post.comments_count }
       format.png do 
-        cached_file = Rails.root.join("tmp/cache/comments_count_#{comments_count}.png")
+        cache_dir  = Rails.root.join("tmp/cache")
+        cache_file = Rails.root.join(cache_dir, "comments_count_#{comments_count}.png")
         
-        if !File.exists? cached_file
+        if !File.exists? cache_file
           icon_path = Rails.root.join("public/images/comment.png")
           icon = Magick::Image.read(icon_path).first
           canvas = Magick::Image.new(80, 32)
@@ -49,11 +50,11 @@ class CommentsController < ApplicationController
           # Tweak the font to draw slightly up and left from the center
           text.annotate(canvas, 0, 0, 40, 0, comments_count.to_s)
           
-          cached_file = Rails.root.join("tmp/cache/comments_count_#{comments_count}.png")
-          canvas.transparent("white").write cached_file
+          Dir.mkdir(cache_dir) if !File.exists? cache_dir
+          canvas.transparent("white").write cache_file
         end
    
-        send_file cached_file, :disposition => "inline", :type => "image/png" 
+        send_file cache_file, :disposition => "inline", :type => "image/png" 
       end
     end  
 
