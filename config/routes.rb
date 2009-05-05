@@ -1,6 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
   map.root :controller => 'posts'
-  map.resources :posts, :as => 'notes', :has_many => :comments
+  map.resources :posts, :as => 'notes' do |posts|
+    posts.resources :comments, :collection => { :count => :get }
+  end
   map.resources :comments, :only => [:index]
   
   map.login  'login',  :controller => 'session', :action => 'new'
