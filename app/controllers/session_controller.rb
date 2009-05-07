@@ -24,11 +24,14 @@ class SessionController < ApplicationController
     oidresp = consumer.complete(parameters, current_url)
     
     if oidresp.status == OpenID::Consumer::SUCCESS
+      open_id = oidresp.display_identifier
+      user = User.find_or_create_by_open_id(open_id)
       ax_resp = OpenID::AX::FetchResponse.from_success_response(oidresp)
-      email = ax_resp['http://axschema.org/contact/email'].first
-      user = User.find_or_create_by_email(email)
-      user.open_id = oidresp.display_identifier
-      user.save(false)
+      if ax_resp
+        email = ax_resp['http://axschema.org/contact/email'].first
+        user.email = email
+        user.save(false)
+      end
       session[:user_id] = user.id
     else
       flash[:notice] = "Авторизоваться через Google Account не удалось."    
