@@ -1,6 +1,6 @@
 .post
   .content
-    = markdown h post.content
+    ~ markdown h post.content
   .metadata 
     %strong
       = post.author.name
@@ -15,4 +15,3 @@
       = link_to 'Редактировать', edit_post_path(post) 
       |
       = link_to 'Удалить', post_path(post), :confirm => 'Точно удалить?', :method => :delete
-      

@@ -1,4 +1,1 @@
-= render :partial => "comment", :locals => { :comment => @comment }
-%p
-  == Этот комментарий был оставлен к следующей #{link_to "заметке", @comment.post}:
-= render :partial => "posts/post", :locals => { :post => @comment.post }
+= render :partial => "comment_with_post", :locals => { :comment => @comment }

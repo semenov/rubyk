@@ -1,0 +1,6 @@
+.post
+  .content
+    ~ markdown h comment.post.content    
+  = render :partial => "comment", :object => comment
+  %div
+    = link_to "Заметка целиком", comment.post

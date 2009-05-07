@@ -1,10 +1,7 @@
 - if !@comments.empty?
   .comments
     - for comment in @comments
-      .post
-        .content
-          = markdown h comment.post.content    
-        = render :partial => "comment", :locals => { :comment => comment }
+      = render :partial => "comment_with_post" , :locals => { :comment => comment }
   = will_paginate @comments, :prev_label => '&laquo;', :next_label => '&raquo;'
 - else
   %p Пока комментариев нет.
