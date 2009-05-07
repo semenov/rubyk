@@ -29,8 +29,11 @@ class SessionController < ApplicationController
       ax_resp = OpenID::AX::FetchResponse.from_success_response(oidresp)
       if ax_resp
         email = ax_resp['http://axschema.org/contact/email'].first
-        user.email = email
+        user = User.find_or_create_by_email(email)   
+        user.open_id = open_id
         user.save(false)
+      else
+        user = User.find_or_create_by_open_id(open_id)      
       end
       session[:user_id] = user.id
     else
