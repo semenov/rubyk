@@ -47,7 +47,7 @@ class SessionController < ApplicationController
   def destroy
     reset_session
     flash[:notice] = "Вы успешно вышли из системы"
-    redirect_to root_path
+    redirect_to :back
   end
   
   private
