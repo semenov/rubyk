@@ -11,8 +11,8 @@ class SessionController < ApplicationController
     single_attribute = OpenID::AX::AttrInfo.new("http://axschema.org/contact/email", "email", true)
     axreq.add(single_attribute)
     oidreq.add_extension(axreq)
-
-    return_to = url_for :action => 'create', :only_path => false
+    referer = (request.referer ? request.referer : root_url)
+    return_to = url_for :action => 'create', :only_path => false, :return_to => referer
     realm = root_url
     
     redirect_to oidreq.redirect_url(realm, return_to) 
@@ -20,6 +20,7 @@ class SessionController < ApplicationController
  
   def create
     current_url = url_for(:action => 'create', :only_path => false)
+    return_to = params[:return_to]
     parameters = params.reject{ |k, v| request.path_parameters[k] }
     oidresp = consumer.complete(parameters, current_url)
     
@@ -40,7 +41,7 @@ class SessionController < ApplicationController
       flash[:notice] = "Авторизоваться через Google Account не удалось."    
     end
     
-    redirect_to root_path
+    redirect_to return_to
   end
  
   def destroy
