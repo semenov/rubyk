@@ -1,4 +1,4 @@
 rdiscount
 will_paginate
 ruby-openid
-mbleigh-acts-as-taggable-on
+mbleigh-acts-as-taggable-on --source http://gems.github.com
