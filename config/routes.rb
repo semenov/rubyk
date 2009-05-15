@@ -10,6 +10,7 @@ ActionController::Routing::Routes.draw do |map|
   map.auth_info 'auth_info', :controller => 'pages', :action => 'auth_info'
   map.about 'about', :controller => 'pages', :action => 'about'
   map.feed  'feed', :controller => 'posts', :action => 'feed'
+  map.tag  'tags/:tag', :controller => 'posts', :action => 'with_tag'
   
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'

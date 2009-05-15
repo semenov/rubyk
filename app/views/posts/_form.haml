@@ -17,6 +17,11 @@
       =link_to('Markdown', 'http://ru.wikipedia.org/wiki/Markdown')
       для разметки
     = f.text_area :content
+    
+  %p
+    .tip
+      Теги (через запятую)
+    = f.text_field :tag_list    
 
   %p
     = f.submit "Сохранить"

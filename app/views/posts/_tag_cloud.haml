@@ -1,0 +1,3 @@
+#tag-cloud
+  - tag_cloud tags, ['tag-small', 'tag-medium', 'tag-large'] do |tag, css_class|
+    = link_to h(tag.name), tag_path(tag.name), :class => css_class

@@ -1,5 +1,9 @@
 #posts
+  - if @current_tag
+    %h1 
+      == Все заметки с тегом &laquo;#{h @current_tag}&raquo; 
   = render :partial => "post", :collection => @posts
   = will_paginate @posts, :prev_label => '&laquo;', :next_label => '&raquo;'
+  = render :partial => "tag_cloud", :locals => { :tags => @tags }
      
 

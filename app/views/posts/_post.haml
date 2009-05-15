@@ -1,6 +1,12 @@
 .post
   .content
     ~ markdown h post.content
+  .tags
+    Теги:
+    - tag_links = []
+    - post.tags.each do |tag|
+      - tag_links << link_to(h(tag), tag_path(tag.name))
+    = tag_links.join ', '
   .metadata 
     %strong
       = post.author.name

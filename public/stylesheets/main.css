@@ -123,9 +123,9 @@ ul#menu {
     font-size: 1.6em;
     font-weight: normal;
     padding: 0;
-    margin: 0; }
+    margin: 0 0 1em; }
   #content .post, #content .comment {
-    padding: 2em;
+    padding: 2em 2em 3em 2em;
     background-color: #e9e8e2;
     margin: 0 0 2em 0; }
   #content .post .comment {
@@ -135,7 +135,13 @@ ul#menu {
   #content .metadata {
     color: #AAA;
     font-size: smaller;
-    padding-top: 0.5em; }
+    padding-top: 0.5em;
+    float: left; }
+  #content .tags {
+    color: #AAA;
+    font-size: smaller;
+    padding-top: 0.5em;
+    float: right; }
   #content .content p {
     font-size: 1.2em;
     margin: 0 0 0.5em 0; }
@@ -143,6 +149,8 @@ ul#menu {
     width: 50%;
     height: 150px;
     font-size: 1.2em; }
+  #content input#post_tag_list {
+    width: 50%; }
   #content .tip {
     font-size: smaller;
     color: #777; }
@@ -151,6 +159,21 @@ ul#menu {
     height: 1px;
     color: #DDD;
     background-color: #DDD; }
+
+#tag-cloud {
+  margin-top: 2em; }
+  #tag-cloud a {
+    text-decoration: none;
+    padding: 0.1em; }
+    #tag-cloud a:hover {
+      color: white;
+      background-color: #554a43; }
+  #tag-cloud .tag-small {
+    font-size: 1em; }
+  #tag-cloud .tag-medium {
+    font-size: 1.5em; }
+  #tag-cloud .tag-large {
+    font-size: 2em; }
 
 #footer {
   padding: 2em 0 2em 0; }

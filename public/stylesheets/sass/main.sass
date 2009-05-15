@@ -123,10 +123,10 @@ ul#menu
     :font-size 1.6em    
     :font-weight normal
     :padding 0
-    :margin 0
+    :margin 0 0 1em
 
   .post, .comment 
-    :padding 2em
+    :padding 2em 2em 3em 2em
     :background-color = !area
     :margin 0 0 2em 0 
     
@@ -140,8 +140,14 @@ ul#menu
     :color #AAA 
     :font-size smaller
     :padding-top 0.5em
+    :float left
     
-    
+  .tags
+    :color #AAA 
+    :font-size smaller
+    :padding-top 0.5em
+    :float right
+  
   .content p
     :font-size 1.2em
     :margin 0 0 0.5em 0
@@ -150,6 +156,9 @@ ul#menu
     :width 50%
     :height 150px
     :font-size 1.2em
+    
+  input#post_tag_list
+    :width 50%
     
   .tip
     :font-size smaller
@@ -160,6 +169,23 @@ ul#menu
     :height 1px
     :color #DDD 
     :background-color #DDD
+    
+#tag-cloud
+  :margin-top 2em
+  a
+    :text-decoration none
+    :padding 0.1em
+    
+    &:hover
+      :color white
+      :background-color = !main_color
+
+  .tag-small 
+    :font-size 1em
+  .tag-medium 
+    :font-size 1.5em
+  .tag-large
+    :font-size 2em        
     
 #footer
   :padding 2em 0 2em 0  
