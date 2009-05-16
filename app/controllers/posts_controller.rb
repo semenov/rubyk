@@ -13,7 +13,7 @@ class PostsController < ApplicationController
     end
   end
 
-  def index_php
+  def index_php_redirect
     redirect_to index_php_path
   end
   
