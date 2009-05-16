@@ -1,5 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
-  map.root :controller => 'posts'
+  map.root :controller => 'posts', :action => 'index_php'
+  map.index_php 'index.php', :controller => 'posts'
   map.resources :posts, :as => 'notes' do |posts|
     posts.resources :comments, :collection => { :count => :get }
   end

@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 
   before_filter :find_object
-  before_filter :login_required, :except => [:index, :show, :feed]
+  before_filter :login_required, :only => [:new, :create, :edit, :update, :destroy]
   
   def index
     @posts = Post.published.paginate :page => params[:page], :per_page => 10
@@ -11,6 +11,10 @@ class PostsController < ApplicationController
       format.html # index.html.erb
       format.xml  { render :xml => @posts }
     end
+  end
+
+  def index_php
+    redirect_to index_php_path
   end
   
   def with_tag
