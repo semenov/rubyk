@@ -16,7 +16,8 @@ module ApplicationHelper
       ["написать", new_post_path], 
       ["комментарии", comments_path], 
       ["что это?", about_path],
-      [image_tag("feed.png"), "http://feeds.rubyk.ru/rubyk"] 
+      [image_tag("feed.png"), "http://feeds.rubyk.ru/rubyk"],
+      [image_tag("twitter.png"), "http://twitter.com/rubyk_ru"] 
     ]
   end
 end
