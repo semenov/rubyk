@@ -1,5 +1,5 @@
 #post
-  = render :partial => "post", :locals => { :post => @post }
+  = render :partial => "post", :locals => { :post => @post, :full_content => true }
 
 %a{ :name => "comments" }
 %h2 Комментарии

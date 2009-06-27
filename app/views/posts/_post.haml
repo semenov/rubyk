@@ -2,7 +2,13 @@
   %h1.title
     = link_to_unless_current post.title, post
   .content
-    ~ markdown h post.content
+    - unless defined? full_content
+      ~ markdown h post.truncated_content
+      .read-more
+        - if post.has_more?
+          = link_to "Читать далее &rarr;", post  
+    - else      
+      ~ markdown h post.content
   .tags
     Теги:
     - tag_links = []

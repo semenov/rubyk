@@ -10,4 +10,16 @@ class Post < ActiveRecord::Base
     return author.id == user.id || user.admin?
   end
 
+  PageSeparator = /^\s*\n-{3,}\s*$/m
+  
+public
+  
+  def truncated_content
+    content.split(PageSeparator).first
+  end
+ 
+  def has_more?
+    content.index(PageSeparator)
+  end
+
 end
