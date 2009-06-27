@@ -13,8 +13,13 @@
 
   %p
     .tip
+      Заголовок
+    = f.text_field :title
+
+  %p
+    .tip
       Используйте 
-      =link_to('Markdown', 'http://ru.wikipedia.org/wiki/Markdown')
+      = link_to('Markdown', 'http://ru.wikipedia.org/wiki/Markdown')
       для разметки
     = f.text_area :content
     
