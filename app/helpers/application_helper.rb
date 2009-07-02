@@ -3,7 +3,7 @@ module ApplicationHelper
   # Replacement for Rails' default Markdown helper which uses RDiscount instead
   # of BlueCloth.
   def markdown(text)
-    text.blank? ? "" : RDiscount.new(text).to_html
+    text.blank? ? "" : RDiscount.new(text, :filter_html).to_html
   end
   
   def nice_date(date)

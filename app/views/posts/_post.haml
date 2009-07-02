@@ -3,12 +3,11 @@
     = link_to_unless_current post.title, post
   .content
     - unless defined? full_content
-      ~ markdown h post.truncated_content
-      .read-more
-        - if post.has_more?
+      - cut_content(markdown(post.content)) do
+        .read-more
           = link_to "Читать далее &rarr;", post  
     - else      
-      ~ markdown h post.content
+      ~ markdown post.content
   .tags
     Теги:
     - tag_links = []

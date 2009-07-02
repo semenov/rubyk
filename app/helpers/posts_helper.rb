@@ -1,4 +1,14 @@
 module PostsHelper
+
+  def cut_content(text, &block)
+    parts = text.split('<hr />')
+    concat find_and_preserve parts.first
+    if parts.size >= 2
+      yield
+    end
+  end
+  
+  
   def tag_cloud(tags, classes)
     return if tags.empty?
     
