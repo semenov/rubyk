@@ -7,16 +7,14 @@ xml.rss(:version=>"2.0") do
     xml.language('ru')
     for post in @posts
       xml.item do
-        plain_title = strip_tags(markdown(post.content))
-        title = plain_title.split(' ').slice(0, 3).join(' ') + '...'
-        xml.title(title)
-        xml.description(
-          markdown(h(post.content)) + 
-          link_to(
+        xml.title(post.title)
+        xml.description do
+          xml.text! markdown(post.content)
+          xml.text! link_to(
             image_tag(count_post_comments_url(post, :format => :png), :title => "Комментарии", :alt => "Комментарии"), 
             post_url(post, :anchor => "comments")
           )
-        )      
+        end
         xml.author(post.author.name)               
         xml.pubDate(post.created_at.strftime("%a, %d %b %Y %H:%M:%S %z"))
         xml.link(post_url(post))
