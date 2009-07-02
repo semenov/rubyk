@@ -4,193 +4,193 @@
 
 h
 div
-  :padding 0
-  :margin 0
+  padding: 0
+  margin: 0
     
 body 
-  :margin 40px 80px    
+  margin: 40px 80px    
 
 img
-  :border-width 0
+  border-width: 0
   
 a
-  :color = !main_color
+  color = !main_color
   
   &:hover
-    :color = !main_color_hover 
-    :text-decoration underline  
+    color = !main_color_hover 
+    text-decoration: underline  
     
 a[name]
-  :text-decoration inherit
-  :color inherit 
-  :background inherit  
+  text-decoration: inherit
+  color: inherit 
+  background: inherit  
     
 h2
-  :font-family Verdana 
+  font-family: Verdana 
 
 
 #header
-  :padding 0 0 1.5em 0
-  :height 7em
+  padding: 0 0 1.5em 0
+  height: 7em
 
     
   #logo 
-    :margin 0
-    :float left
+    margin: 0
+    float: left
 
     
   #auth
-    :font-size smaller
-    :float right
-    :display inline
-    :padding 45px 0 0 0
+    font-size: smaller
+    float: right
+    display: inline
+    padding: 45px 0 0 0
 
 
 =button_universal
-  :text-decoration none
-  :padding 0.4em 0.6em 0.4em 0.6em
-  :font-size smaller
-  :font-weight bold
-  :font-family Verdana
-  :border
-    :width 1px
-    :style solid
-    :color #FFF    
+  text-decoration: none
+  padding: 0.4em 0.6em 0.4em 0.6em
+  font-size: smaller
+  font-weight: bold
+  font-family: Verdana
+  border:
+    width: 1px
+    style: solid
+    color: #FFF    
 
   
 =button
   a
-    :color = !main_color
+    color = !main_color
     +button_universal    
     
-    &:hover
-      //:text-decoration underline     
-      :border-color = !main_color       
+    &:hover   
+      border-color = !main_color       
       
 .button
   +button    
     
 ul#menu
-  :list-style none
-  :padding 0
-  :margin 42px 0 0 2em
-  :float left
+  list-style: none
+  padding: 0
+  margin: 42px 0 0 2em
+  float: left
   li
-    :float left
-    :margin 0 0.3em
-    :font-size smaller
-    :font-weight bold
-    :font-family Verdana    
+    float: left
+    margin: 0 0.3em
+    font-size: smaller
+    font-weight: bold
+    font-family: Verdana    
     .current
-      :display inline
-      :color #FFF
-      :background-color = !main_color
-      :border-color = !main_color
+      display: inline
+      color: #FFF
+      background-color = !main_color
+      border-color = !main_color
     a, .current
-      :padding 0.4em 0.6em 0.4em 0.6em
+      padding: 0.4em 0.6em 0.4em 0.6em
     img 
-      :vertical-align middle
+      vertical-align: middle
     
 #new-post-link 
-  :margin-top 1em
-  :float left
+  margin-top: 1em
+  float: left
   +button
 
 
 .pagination
   +button
   .disabled
-    :display none
+    display: none
   a, .current
-    :margin-right 0.4em
+    margin-right: 0.4em
   .current
-    :color #FFF
-    :background-color = !main_color
+    color: #FFF
+    background-color = !main_color
     +button_universal
 
-
-
-    
 #notice
-  :color green
-  :margin-bottom 1em
+  color: green
+  margin-bottom: 1em
   
    
 
 #content
-  :padding-top 0.5em
+  padding-top: 0.5em
   h1
-    :font-size 1.6em    
-    :font-weight normal
-    :padding 0
-    :margin 0 0 1em
+    font-size: 1.6em    
+    font-weight: normal
+    padding: 0
+    margin: 0 0 1em
 
   .post, .comment 
-    :padding 2em 2em 3em 2em
-    :background-color = !area
-    :margin 0 0 2em 0 
+    padding: 2em 2em 3em 2em
+    background-color = !area
+    margin: 0 0 2em 0 
     
-  .post .comment
-    :margin 1.5em 0 1.5em 0 
+  .post h1.title
+    font-family: Verdana, Arial, sans-serif
+    a
+      text-decoration: none
+      &:hover
+        text-decoration: underline
 
   .comment 
-    :background-color = !area + #0C0C00
+    background-color = !area + #0C0C00
     
   .metadata
-    :color #AAA 
-    :font-size smaller
-    :padding-top 0.5em
-    :float left
+    color: #AAA 
+    font-size: smaller
+    padding-top: 0.5em
+    float: left
     
   .tags
-    :color #AAA 
-    :font-size smaller
-    :padding-top 0.5em
-    :float right
+    color: #AAA 
+    font-size: smaller
+    padding-top: 0.5em
+    float: right
   
   .content p
-    :font-size 1.2em
-    :margin 0 0 0.5em 0
+    font-size: 1.2em
+    margin: 0 0 0.5em 0
     
   textarea
-    :width 50%
-    :height 150px
-    :font-size 1.2em
+    width: 50%
+    height: 150px
+    font-size: 1.2em
     
   input#post_tag_list
-    :width 50%
+    width: 50%
     
   .tip
-    :font-size smaller
-    :color #777
+    font-size: smaller
+    color: #777
     
   hr
-    :border 0
-    :height 1px
-    :color #DDD 
-    :background-color #DDD
+    border: 0
+    height: 1px
+    color: #DDD 
+    background-color: #DDD
     
 #tag-cloud
-  :margin-top 2em
+  margin-top: 2em
   a
-    :text-decoration none
-    :padding 0.1em
+    text-decoration: none
+    padding: 0.1em
     
     &:hover
-      :color white
-      :background-color = !main_color
+      color: white
+      background-color = !main_color
 
   .tag-small 
-    :font-size 1em
+    font-size: 1em
   .tag-medium 
-    :font-size 1.5em
+    font-size: 1.5em
   .tag-large
-    :font-size 2em        
+    font-size: 2em        
     
 #footer
-  :padding 2em 0 2em 0  
+  padding: 2em 0 2em 0  
   .copyright
-    :float left  
-    :margin-top 10px
+    float: left  
+    margin-top: 10px
   .counter
-    :float right
+    float: right

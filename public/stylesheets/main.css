@@ -128,8 +128,12 @@ ul#menu {
     padding: 2em 2em 3em 2em;
     background-color: #e9e8e2;
     margin: 0 0 2em 0; }
-  #content .post .comment {
-    margin: 1.5em 0 1.5em 0; }
+  #content .post h1.title {
+    font-family: Verdana, Arial, sans-serif; }
+    #content .post h1.title a {
+      text-decoration: none; }
+      #content .post h1.title a:hover {
+        text-decoration: underline; }
   #content .comment {
     background-color: #f5f4e2; }
   #content .metadata {
