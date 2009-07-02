@@ -14,7 +14,7 @@ class PostsController < ApplicationController
   end
 
   def index_php_redirect
-    redirect_to index_php_path
+    redirect_to root_path
   end
   
   def with_tag
